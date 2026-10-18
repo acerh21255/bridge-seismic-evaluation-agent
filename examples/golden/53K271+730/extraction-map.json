@@ -1,0 +1,959 @@
+{
+  "source_sha256": "eeb6ba49303c9299140fcd69ea9ce892682fffabb318c1b7e5bd690b500ed4ed",
+  "records": [
+    {
+      "check_id": "E1-P1-longitudinal-e1_capacity",
+      "table_index": 11,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "1#左墩墩底",
+        "3026.57",
+        "1670.11",
+        "6778",
+        "2.24",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-P2-longitudinal-e1_capacity",
+      "table_index": 11,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "2#右墩墩底",
+        "3043.53",
+        "1397.16",
+        "8040",
+        "2.64",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-F1-longitudinal-e1_capacity",
+      "table_index": 12,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "1#桩",
+        "3061.74",
+        "1913.90",
+        "3346",
+        "1.09",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-F2-longitudinal-e1_capacity",
+      "table_index": 12,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "2#桩",
+        "3065.15",
+        "1524.22",
+        "3997",
+        "1.30",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-P1-transverse-e1_capacity",
+      "table_index": 15,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "1#右墩墩顶",
+        "2001.50",
+        "1651.30",
+        "4394",
+        "2.20",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-P2-transverse-e1_capacity",
+      "table_index": 15,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "2#左墩墩顶",
+        "2076.72",
+        "1570.91",
+        "4850",
+        "2.34",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-F1-transverse-e1_capacity",
+      "table_index": 16,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "1#桩",
+        "2275.86",
+        "1000.40",
+        "4365",
+        "1.92",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-F2-transverse-e1_capacity",
+      "table_index": 16,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "2#桩",
+        "2344.54",
+        "898.24",
+        "4782",
+        "2.04",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-P1-longitudinal-e2_moment",
+      "table_index": 20,
+      "row_index": 2,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "1#右墩墩底",
+        "2911.13",
+        "3646.36",
+        "3049.00",
+        "0.84",
+        "进入屈服"
+      ]
+    },
+    {
+      "check_id": "E2-P2-longitudinal-e2_moment",
+      "table_index": 20,
+      "row_index": 4,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "2#右墩墩底",
+        "2949.60",
+        "3030.69",
+        "3060.00",
+        "1.01",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-P1-longitudinal-shear",
+      "table_index": 21,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "1#右墩墩底",
+        "419.00",
+        "1129.12",
+        "2.69",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-P2-longitudinal-shear",
+      "table_index": 21,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "2#右墩墩底",
+        "294.45",
+        "1132.29",
+        "3.85",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F1-longitudinal-e2_moment",
+      "table_index": 22,
+      "row_index": 1,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "1#桩",
+        "2974.77",
+        "4145.71",
+        "3008.00",
+        "0.73",
+        "验算超强弯矩"
+      ]
+    },
+    {
+      "check_id": "E2-F2-longitudinal-e2_moment",
+      "table_index": 22,
+      "row_index": 2,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "纵向地震",
+        "2#桩",
+        "3019.01",
+        "3363.68",
+        "3024.00",
+        "0.90",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-F1-longitudinal-shear",
+      "table_index": 23,
+      "row_index": 1,
+      "demand_col": 5,
+      "capacity_col": 6,
+      "source_row": [
+        "纵向地震",
+        "1#桩",
+        "2974.77",
+        "167.44",
+        "0.85",
+        "196.98",
+        "1134.36",
+        "5.76",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F2-longitudinal-shear",
+      "table_index": 23,
+      "row_index": 2,
+      "demand_col": 5,
+      "capacity_col": 6,
+      "source_row": [
+        "纵向地震",
+        "2#桩",
+        "3019.01",
+        "103.93",
+        "0.85",
+        "122.27",
+        "1138.00",
+        "9.31",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-P1-transverse-e2_moment",
+      "table_index": 27,
+      "row_index": 2,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "1#右墩墩顶",
+        "334.55",
+        "4980.30",
+        "2183.00",
+        "0.44",
+        "进入屈服"
+      ]
+    },
+    {
+      "check_id": "E2-P2-transverse-e2_moment",
+      "table_index": 27,
+      "row_index": 3,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "2#左墩墩顶",
+        "603.24",
+        "4740.50",
+        "2282.00",
+        "0.48",
+        "进入屈服"
+      ]
+    },
+    {
+      "check_id": "E2-P1-transverse-shear",
+      "table_index": 28,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#右墩墩底",
+        "849",
+        "910",
+        "1.07",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-P2-transverse-shear",
+      "table_index": 28,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#左墩墩底",
+        "702",
+        "931",
+        "1.33",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F1-transverse-e2_moment",
+      "table_index": 29,
+      "row_index": 1,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "1#桩",
+        "9972",
+        "2708",
+        "7392",
+        "2.73",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F2-transverse-e2_moment",
+      "table_index": 29,
+      "row_index": 2,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "2#桩",
+        "6228",
+        "2668",
+        "6404",
+        "2.40",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F1-transverse-shear",
+      "table_index": 30,
+      "row_index": 1,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "1#桩",
+        "494.37",
+        "609.39",
+        "930.09",
+        "1.52",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-F2-transverse-shear",
+      "table_index": 30,
+      "row_index": 2,
+      "demand_col": 3,
+      "capacity_col": 4,
+      "source_row": [
+        "横向地震",
+        "2#桩",
+        "796.18",
+        "488.28",
+        "954.95",
+        "1.95",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B0-longitudinal-bearing_displacement",
+      "table_index": 13,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "0#桥台",
+        "0.06",
+        "0.07",
+        "1.17",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B1-longitudinal-bearing_displacement",
+      "table_index": 13,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "1#墩",
+        "0.06",
+        "0.07",
+        "1.17",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B2-longitudinal-bearing_displacement",
+      "table_index": 13,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "2#墩",
+        "0.06",
+        "0.07",
+        "1.17",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B3-longitudinal-bearing_displacement",
+      "table_index": 13,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "3#桥台",
+        "0.06",
+        "0.07",
+        "1.17",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B0-longitudinal-bearing_sliding",
+      "table_index": 14,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "0#桥台",
+        "31.31",
+        "294.34",
+        "9.40",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B1-longitudinal-bearing_sliding",
+      "table_index": 14,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "1#墩",
+        "208",
+        "668.62",
+        "3.21",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B2-longitudinal-bearing_sliding",
+      "table_index": 14,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "2#墩",
+        "150.46",
+        "662.07",
+        "4.40",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B3-longitudinal-bearing_sliding",
+      "table_index": 14,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "3#桥台",
+        "31.31",
+        "298.60",
+        "9.54",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B0-transverse-bearing_displacement",
+      "table_index": 17,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "0#桥台",
+        "0.03",
+        "0.07",
+        "2.33",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B1-transverse-bearing_displacement",
+      "table_index": 17,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "0.02",
+        "0.07",
+        "3.50",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B2-transverse-bearing_displacement",
+      "table_index": 17,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "0.03",
+        "0.07",
+        "2.33",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B3-transverse-bearing_displacement",
+      "table_index": 17,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "3#桥台",
+        "0.03",
+        "0.07",
+        "2.33",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B0-transverse-bearing_sliding",
+      "table_index": 19,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "0#桥台",
+        "31.31",
+        "294.34",
+        "9.40",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B1-transverse-bearing_sliding",
+      "table_index": 19,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "296.51",
+        "668.62",
+        "2.25",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B2-transverse-bearing_sliding",
+      "table_index": 19,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "243.94",
+        "662.07",
+        "2.71",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-B3-transverse-bearing_sliding",
+      "table_index": 19,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "3#桥台",
+        "31.31",
+        "298.60",
+        "9.54",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B0-longitudinal-bearing_displacement",
+      "table_index": 24,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "0#桥台",
+        "0.12",
+        "0.07",
+        "0.58",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B1-longitudinal-bearing_displacement",
+      "table_index": 24,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "1#墩",
+        "0.12",
+        "0.07",
+        "0.58",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B2-longitudinal-bearing_displacement",
+      "table_index": 24,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "2#墩",
+        "0.12",
+        "0.07",
+        "0.58",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B3-longitudinal-bearing_displacement",
+      "table_index": 24,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "3#桥台",
+        "0.12",
+        "0.07",
+        "0.58",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B0-longitudinal-bearing_sliding",
+      "table_index": 26,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "0#桥台",
+        "45.76",
+        "294.34",
+        "6.43",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B1-longitudinal-bearing_sliding",
+      "table_index": 26,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "1#墩",
+        "451.35",
+        "668.62",
+        "1.48",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B2-longitudinal-bearing_sliding",
+      "table_index": 26,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "2#墩",
+        "334.21",
+        "662.07",
+        "1.98",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B3-longitudinal-bearing_sliding",
+      "table_index": 26,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "纵向地震",
+        "3#桥台",
+        "45.76",
+        "298.60",
+        "6.53",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B0-transverse-bearing_displacement",
+      "table_index": 31,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "0#桥台",
+        "0.08",
+        "0.07",
+        "0.88",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B1-transverse-bearing_displacement",
+      "table_index": 31,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "0.08",
+        "0.07",
+        "0.88",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B2-transverse-bearing_displacement",
+      "table_index": 31,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "0.09",
+        "0.07",
+        "0.78",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B3-transverse-bearing_displacement",
+      "table_index": 31,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "3#桥台",
+        "0.10",
+        "0.07",
+        "0.70",
+        "不通过"
+      ]
+    },
+    {
+      "check_id": "E2-B0-transverse-bearing_sliding",
+      "table_index": 34,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "0#桥台",
+        "45.76",
+        "294.34",
+        "6.43",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B1-transverse-bearing_sliding",
+      "table_index": 34,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "451.35",
+        "668.62",
+        "1.48",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B2-transverse-bearing_sliding",
+      "table_index": 34,
+      "row_index": 3,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "334.21",
+        "662.07",
+        "1.98",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-B3-transverse-bearing_sliding",
+      "table_index": 34,
+      "row_index": 4,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "3#桥台",
+        "45.76",
+        "298.60",
+        "6.53",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-C1M-transverse-additional",
+      "table_index": 18,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "63.139",
+        "4816.55754",
+        "76.28498297",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E1-C2M-transverse-additional",
+      "table_index": 18,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "58.092",
+        "4816.55754",
+        "82.91257901",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-C1M-transverse-additional",
+      "table_index": 32,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "413.2901",
+        "4816.55754",
+        "11.65418078",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-C2M-transverse-additional",
+      "table_index": 32,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "384.2466",
+        "4816.55754",
+        "12.53506873",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-C1V-transverse-additional",
+      "table_index": 33,
+      "row_index": 1,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "1#墩",
+        "197.267",
+        "24532.7133",
+        "124.3629867",
+        "通过"
+      ]
+    },
+    {
+      "check_id": "E2-C2V-transverse-additional",
+      "table_index": 33,
+      "row_index": 2,
+      "demand_col": 2,
+      "capacity_col": 3,
+      "source_row": [
+        "横向地震",
+        "2#墩",
+        "183.44",
+        "24532.7133",
+        "133.7369892",
+        "通过"
+      ]
+    }
+  ]
+}

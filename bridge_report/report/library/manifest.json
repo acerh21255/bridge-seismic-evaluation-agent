@@ -1,0 +1,108 @@
+{
+  "source": "G8511 76K278+308 (20m+33m+20m)抗震设计验算报告.docx",
+  "source_sha256": "a6c2093be18799c817aa60333eda30601b57dc532033b7c05f21a0ddb1cb6ca6",
+  "note": "通用示意图与公式片段按原样抽取；片段中的图片以 LIB:文件名 引用，渲染时重新挂接。",
+  "figures": [
+    {
+      "name": "m_phi",
+      "file": "figures/m_phi.png",
+      "title": "等效屈服弯矩计算示意（原图6.1-1）",
+      "source_element": 231,
+      "sha256": "4ec6eb2975b485a511c436f54b7fb215efe249fc41ad6fb2acc026401509ce5b"
+    },
+    {
+      "name": "bearing_bilinear",
+      "file": "figures/bearing_bilinear.png",
+      "title": "支座双线性恢复力模型（原图5.2-1）",
+      "source_element": 197,
+      "sha256": "302a47c5fde50d7021fdc27ffd7981971f390a12671fe7d6721dad8441dde36f"
+    },
+    {
+      "name": "beam_end_formula",
+      "file": "figures/beam_end_formula.png",
+      "title": "梁端最小距离公式（原式6.5）",
+      "source_element": 320,
+      "sha256": "11474ee4d9e745b69c8fb78acc7845ba6b61b91240d6994cb9b84f265d63dd7c"
+    },
+    {
+      "name": "beam_end_distance",
+      "file": "figures/beam_end_distance.png",
+      "title": "梁端至墩台帽或盖梁边缘最小距离示意（原图6.4）",
+      "source_element": 324,
+      "sha256": "61aedafb7deb0d5dc49ad04a2d37e6a2fcb5c8ebec0d64a6279bda999a9a7578"
+    },
+    {
+      "name": "six_spring",
+      "file": "figures/six_spring.png",
+      "title": "桩基础六弹簧模型，自 Word 导出的原报告 PDF 第16页裁切（300 dpi，x 88–507 pt，y 200–401 pt，不含原题注）",
+      "source_element": 176,
+      "sha256": "5c414caa103a71eb8036d65b1164494cccc74fd3c0cc5bee541a5e9c349653ee"
+    },
+    {
+      "name": "stirrup_ratio_1",
+      "file": "figures/stirrup_ratio_1.png",
+      "title": "延性构造最小配箍率公式（嵌入图）",
+      "source_element": 393,
+      "sha256": "6bab6c53ed8059c1f4796446bbd0fd186642c0cb9db1ebb11d1fa629639f6c45"
+    },
+    {
+      "name": "stirrup_ratio_2",
+      "file": "figures/stirrup_ratio_2.png",
+      "title": "延性构造最小配箍率公式（嵌入图）",
+      "source_element": 393,
+      "sha256": "725976867887236b3338a1149b6259455bcd1aa8648d63daae00de5d7c9587c2"
+    }
+  ],
+  "fragments": [
+    {
+      "name": "materials_conversion",
+      "file": "fragments/materials_conversion.xml",
+      "title": "新老规范混凝土强度换算说明、换算表与公式",
+      "source_elements": [
+        100,
+        113
+      ],
+      "sha256": "e1b1de107b7acc99d118ead3eb45106ab3489c8a3e41e3f47a0b944e6128d79c"
+    },
+    {
+      "name": "shear_formulas",
+      "file": "fragments/shear_formulas.xml",
+      "title": "斜截面受剪承载力公式（JTG 3362-2018）",
+      "source_elements": [
+        242,
+        248
+      ],
+      "sha256": "9cf0faac25b561f58a7a2a95bda6da43267f76f245f585bea3ffed6a995a584f"
+    },
+    {
+      "name": "hinge_shear_formulas",
+      "file": "fragments/hinge_shear_formulas.xml",
+      "title": "塑性铰区抗剪公式（JTG/T 2231-02—2021）",
+      "source_elements": [
+        338,
+        367
+      ],
+      "sha256": "efe6857be33f30057bc9110b64937e5124ff40a17092a926d5f812617a0e30fe"
+    },
+    {
+      "name": "displacement_ductility",
+      "file": "fragments/displacement_ductility.xml",
+      "title": "墩顶位移延性验算公式",
+      "source_elements": [
+        386,
+        389
+      ],
+      "sha256": "29563aea92261edd12f267f2c57c8514e9f58322cb4e14442ac146fb90ca4cdc"
+    },
+    {
+      "name": "stirrup_ratio",
+      "file": "fragments/stirrup_ratio.xml",
+      "title": "延性构造最小配箍率公式",
+      "source_elements": [
+        393,
+        402
+      ],
+      "sha256": "8ad51552cc043e8bad90deba88309026797134e9d09fd8734db5e3cf7a1c9189"
+    }
+  ]
+}

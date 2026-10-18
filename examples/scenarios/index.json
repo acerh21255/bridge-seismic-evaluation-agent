@@ -1,0 +1,72 @@
+[
+  {
+    "id": "golden-76K",
+    "title": "76K278+308 原报告复现",
+    "group": "golden",
+    "expected_status": "FAIL",
+    "description": "按原报告数据复现：1#墩底进入塑性并经加固满足延性要求，三级抗震措施中限位装置不满足。",
+    "file": "golden/76K278+308/handoff.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 45
+  },
+  {
+    "id": "golden-53K",
+    "title": "53K271+730 原报告复现",
+    "group": "golden",
+    "expected_status": "FAIL",
+    "description": "连续空心板梁桥、双柱墩：E2 桥墩进入塑性，桩基能力保护存在不满足及待补正，按流程停止后续验算。",
+    "file": "golden/53K271+730/handoff.json",
+    "bridge_name": "G8511昆磨高速 K271+730",
+    "checks_count": 62
+  },
+  {
+    "id": "retrofit_pass",
+    "title": "加固后满足",
+    "description": "1#墩底进入塑性，经韧性提升后延性三项满足，限位装置按已设置处理。",
+    "expected_status": "PASS",
+    "group": "variant",
+    "file": "scenarios/retrofit_pass.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 45
+  },
+  {
+    "id": "elastic",
+    "title": "弹性通过",
+    "description": "E2 桥墩弯矩均低于等效屈服弯矩，全桥保持弹性，无需延性验算。",
+    "expected_status": "PASS",
+    "group": "variant",
+    "file": "scenarios/elastic.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 40
+  },
+  {
+    "id": "e1_fail",
+    "title": "E1强度破坏",
+    "description": "1#墩底 E1 截面承载力低于最不利轴力需求，E2 验算按流程停止。",
+    "expected_status": "FAIL",
+    "group": "variant",
+    "file": "scenarios/e1_fail.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 41
+  },
+  {
+    "id": "missing",
+    "title": "资料缺失",
+    "description": "第三步漏交 2#桩顶横桥向等效屈服弯矩，Agent 列出待补正项。",
+    "expected_status": "BLOCKED",
+    "group": "variant",
+    "file": "scenarios/missing.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 45
+  },
+  {
+    "id": "overstrength",
+    "title": "待超强复算",
+    "description": "1#墩底已进入塑性，1#桩顶弯矩超过等效屈服弯矩，需第三步提交超强弯矩体系传力复算。",
+    "expected_status": "BLOCKED",
+    "group": "variant",
+    "file": "scenarios/overstrength.json",
+    "bridge_name": "G8511昆磨高速 K278+308",
+    "checks_count": 45
+  }
+]

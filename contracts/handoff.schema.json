@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.bridge-report/contracts/handoff-2.0.json",
+  "title": "第三步到第四步交接数据 2.0",
+  "description": "第三步（建模与数值验算）交给第四步（工程报告撰写 Agent）的数据合同。单位：力 kN，弯矩 kN*m，位移 m，无量纲 ratio。报告章节资料为可选字段，缺失时报告以占位呈现并在自检中提示；验算记录的完整性由判定引擎检查。",
+  "type": "object",
+  "required": ["contract_version", "data_kind", "bridge_id", "model_revision", "scenario", "project", "analysis", "components", "checks", "sources", "scope_review"],
+  "properties": {
+    "contract_version": {"const": "2.0"},
+    "data_kind": {"enum": ["engineering_input", "reference_reproduction", "synthetic_variant"]},
+    "variant": {
+      "type": "object",
+      "required": ["id", "title", "base", "changes"],
+      "properties": {
+        "id": {"type": "string"}, "title": {"type": "string"}, "base": {"type": "string"},
+        "changes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "bridge_id": {"type": "string", "minLength": 1},
+    "model_revision": {"type": "string", "minLength": 1},
+    "scenario": {"const": "original"},
+    "project": {
+      "type": "object",
+      "required": ["route", "stake", "short_name", "span_text", "bridge_type", "report_title", "organization", "date", "header_text"],
+      "properties": {
+        "route": {"type": "string"}, "program": {"type": "string"}, "stake": {"type": "string"},
+        "stake_line": {"type": "string"}, "short_name": {"type": "string"},
+        "spans_m": {"type": "array", "items": {"type": "number"}}, "span_text": {"type": "string"},
+        "bridge_type": {"type": "string"}, "report_title": {"type": "string"}, "organization": {"type": "string"},
+        "date": {"type": "string"}, "header_text": {"type": "string"}
+      }
+    },
+    "overview": {
+      "type": "object",
+      "properties": {
+        "description": {"type": "string"}, "pier_description": {"type": "string"}, "research_scope": {"type": "string"},
+        "figures": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "codes": {"type": "array", "items": {"type": "string"}},
+    "seismic": {
+      "type": "object",
+      "properties": {
+        "intensity": {"type": "string"}, "pga_g": {"type": "number"}, "site_class": {"type": "string"},
+        "tg_s": {"type": "number"}, "category": {"type": "string"},
+        "performance_objectives": {"type": "array", "items": {"type": "object"}},
+        "spectrum": {"type": "array", "items": {"$ref": "#/$defs/spectrum"}},
+        "time_history": {"type": "object"},
+        "figures": {"type": "object"}
+      }
+    },
+    "materials": {"type": "object"},
+    "model": {"type": "object"},
+    "modal": {
+      "type": "object",
+      "properties": {
+        "modes": {"type": "array", "items": {"type": "object", "required": ["n", "period_s", "frequency_hz"]}},
+        "figures": {"type": "array", "items": {"type": "object", "required": ["asset", "caption"]}}
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["converged", "axial_sign", "methods"],
+      "properties": {
+        "software": {"type": "string"},
+        "converged": {"type": "boolean"},
+        "axial_sign": {"const": "compression_positive"},
+        "coordinate_convention": {"type": "string"},
+        "methods": {
+          "type": "object",
+          "properties": {
+            "E1": {"enum": ["response_spectrum", "nonlinear_time_history", "linear_time_history"]},
+            "E2": {"enum": ["response_spectrum", "nonlinear_time_history", "linear_time_history"]}
+          }
+        }
+      }
+    },
+    "scope_review": {
+      "type": "object",
+      "required": ["approved", "evidence"],
+      "properties": {"approved": {"type": "boolean"}, "evidence": {"type": "string"}, "note": {"type": "string"}}
+    },
+    "selection": {"type": "object"},
+    "components": {"type": "array", "items": {"$ref": "#/$defs/component"}},
+    "actions": {"type": "array", "items": {"$ref": "#/$defs/action"}},
+    "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "not_applicable": {"type": "array", "items": {"$ref": "#/$defs/not_applicable"}},
+    "detailing": {
+      "type": "object",
+      "properties": {
+        "level1": {"type": "object", "properties": {"rows": {"type": "array", "items": {"$ref": "#/$defs/edge_distance"}}}},
+        "level2": {"type": "array", "items": {"$ref": "#/$defs/detailing_item"}},
+        "level3": {"type": "array", "items": {"$ref": "#/$defs/detailing_item"}}
+      }
+    },
+    "pilecap": {
+      "type": "object",
+      "properties": {
+        "necessity": {"type": "string"},
+        "checks": {"type": "array", "items": {"$ref": "#/$defs/pilecap_check"}}
+      }
+    },
+    "retrofit": {
+      "type": "object",
+      "required": ["model_revision", "description", "checks"],
+      "properties": {
+        "model_revision": {"type": "string", "minLength": 1},
+        "description": {"type": "string"},
+        "scope_note": {"type": "string"},
+        "figure": {"type": "object", "properties": {"assets": {"type": "array", "items": {"type": "string"}}, "caption": {"type": "string"}}},
+        "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}}
+      }
+    },
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "sources": {"type": "object", "additionalProperties": {"$ref": "#/$defs/source"}}
+  },
+  "$defs": {
+    "direction": {"enum": ["longitudinal", "transverse"]},
+    "level": {"enum": ["E1", "E2"]},
+    "nullable_number": {"type": ["number", "null"]},
+    "spectrum": {
+      "type": "object",
+      "required": ["level", "Tg", "Ci", "Cs", "Cd", "A", "Smax"],
+      "properties": {
+        "level": {"$ref": "#/$defs/level"}, "location": {"type": "string"}, "site_class": {"type": "string"},
+        "Tg": {"type": "number"}, "Ci": {"type": "number"}, "Cs": {"type": "number"}, "Cd": {"type": "number"},
+        "A": {"type": "number"}, "Smax": {"type": "number"}
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": ["id", "kind", "label", "directions"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["pier", "pile", "bearing", "measure", "capbeam", "tiebeam"]},
+        "label": {"type": "string"},
+        "directions": {"type": "array", "items": {"$ref": "#/$defs/direction"}, "minItems": 1, "uniqueItems": true},
+        "parent_pier": {"type": "string"},
+        "section_id": {"type": ["string", "null"]}
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["id", "component", "direction", "level", "combination", "N_kN", "M_kNm"],
+      "properties": {
+        "id": {"type": "string"}, "component": {"type": "string"}, "direction": {"$ref": "#/$defs/direction"},
+        "level": {"$ref": "#/$defs/level"}, "combination": {"type": "string"}, "station": {"type": "string"},
+        "N_kN": {"type": "number"}, "M_kNm": {"type": "number"}, "V_kN": {"type": "number"}
+      }
+    },
+    "check": {
+      "type": "object",
+      "required": ["component", "direction", "level", "kind", "unit", "demand", "capacity", "model_revision", "evidence"],
+      "properties": {
+        "component": {"type": "string"},
+        "section_label": {"type": "string"},
+        "direction": {"$ref": "#/$defs/direction"},
+        "level": {"$ref": "#/$defs/level"},
+        "kind": {"enum": ["e1_capacity", "e2_moment", "shear", "bearing_displacement", "bearing_sliding", "measures", "hinge_shear", "ductility_displacement", "ductility_reinforcement", "additional"]},
+        "title": {"type": "string"},
+        "unit": {"enum": ["kN", "kN*m", "m", "ratio"]},
+        "demand": {"$ref": "#/$defs/nullable_number"},
+        "capacity": {"$ref": "#/$defs/nullable_number"},
+        "limit_status": {"enum": ["provided", "not_provided"]},
+        "limit_basis": {"type": "string"},
+        "phi": {"type": "number", "exclusiveMinimum": 0, "maximum": 1, "description": "强度折减系数，判定采用 phi×capacity，如塑性铰区抗剪 φ=0.9"},
+        "axial_kN": {"type": "number"},
+        "combination": {"type": "string"},
+        "method": {"type": "string"},
+        "action_id": {"type": "string"},
+        "paired_N_M": {"type": "object", "properties": {"N_kN": {"type": "number"}, "M_kNm": {"type": "number"}}},
+        "overstrength": {
+          "type": "object",
+          "required": ["basis", "reviewed", "evidence", "factor", "demand"],
+          "properties": {
+            "basis": {"const": "system_equilibrium"}, "reviewed": {"type": "boolean"}, "evidence": {"type": "string"},
+            "factor": {"type": "number"}, "demand": {"type": "number"}, "note": {"type": "string"}
+          }
+        },
+        "model_revision": {"type": "string"},
+        "evidence": {"type": "string"},
+        "locator": {"type": "string"}
+      }
+    },
+    "not_applicable": {
+      "type": "object",
+      "required": ["component", "direction", "level", "kind", "reason", "evidence"],
+      "properties": {
+        "component": {"type": "string"}, "direction": {"$ref": "#/$defs/direction"}, "level": {"$ref": "#/$defs/level"},
+        "kind": {"type": "string"}, "reason": {"type": "string", "minLength": 4}, "evidence": {"type": "string"}
+      }
+    },
+    "edge_distance": {
+      "type": "object",
+      "required": ["location", "design_cm", "required_cm"],
+      "properties": {"location": {"type": "string"}, "design_cm": {"type": "number"}, "required_cm": {"type": "number"}}
+    },
+    "detailing_item": {
+      "type": "object",
+      "required": ["clause", "requirement", "design", "satisfied"],
+      "properties": {
+        "clause": {"type": "string"}, "requirement": {"type": "string"}, "design": {"type": "string"},
+        "satisfied": {"type": ["boolean", "null"]}, "topic": {"type": "string"}
+      }
+    },
+    "pilecap_check": {
+      "type": "object",
+      "required": ["id", "title", "direction", "rows", "demand", "capacity"],
+      "properties": {
+        "id": {"type": "string"}, "title": {"type": "string"}, "direction": {"$ref": "#/$defs/direction"},
+        "rows": {"type": "array", "items": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 3}},
+        "demand": {"$ref": "#/$defs/nullable_number"}, "capacity": {"$ref": "#/$defs/nullable_number"}, "evidence": {"type": "string"}
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": ["id", "path"],
+      "properties": {
+        "id": {"type": "string"}, "path": {"type": "string"}, "caption": {"type": "string"},
+        "sha256": {"type": "string"}, "width_cm": {"type": "number"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "kind": {"enum": ["inline", "file", "external"]},
+        "title": {"type": "string"},
+        "content": {},
+        "path": {"type": "string"},
+        "sha256": {"type": "string"},
+        "note": {"type": "string"}
+      }
+    }
+  }
+}

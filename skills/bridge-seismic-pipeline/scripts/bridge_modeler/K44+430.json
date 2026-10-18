@@ -1,0 +1,44 @@
+{
+  "bridge_name": "K44+430 桥（双河口段）",
+  "stake": "K44+430",
+  "source_drawing": "4K44+430.pdf（output/4K44+430.pdf.json 提取）",
+  "spans": [{"length": 20}, {"length": 20}, {"length": 20}],
+  "piers": [
+    {
+      "pier_id": "P1", "location": 20.0, "height": 12.0,
+      "n_columns": 2, "column_diameter": 1.2, "column_spacing": 5.0,
+      "cap_beam_height": 1.5, "cap_beam_width": 1.8,
+      "pile_diameter": 1.4, "pile_length": 25.0, "soil_m": 10000,
+      "column_material": "C30", "pile_material": "C25"
+    },
+    {
+      "pier_id": "P2", "location": 40.0, "height": 14.0,
+      "n_columns": 2, "column_diameter": 1.2, "column_spacing": 5.0,
+      "cap_beam_height": 1.5, "cap_beam_width": 1.8,
+      "pile_diameter": 1.4, "pile_length": 25.0, "soil_m": 10000,
+      "column_material": "C30", "pile_material": "C25"
+    }
+  ],
+  "abutments": [
+    {"location": 0.0, "type": "重力式台", "restraint": "纵向活动"},
+    {"location": 60.0, "type": "重力式台", "restraint": "纵向活动"}
+  ],
+  "deck": {
+    "girder_type": "T形连续梁", "width": 12.0,
+    "area": 5.6, "inertia_33": 3.8, "inertia_22": 28.0,
+    "torsion_j": 5.5, "shear_as2": 4.7, "shear_as3": 4.7,
+    "unit_weight": 26.0, "material": "C50"
+  },
+  "materials": {
+    "C50": {"name": "C50", "fck": 32.4, "elastic_mod": 34500},
+    "C30": {"name": "C30", "fck": 20.1, "elastic_mod": 30000},
+    "C25": {"name": "C25", "fck": 16.7, "elastic_mod": 28000}
+  },
+  "seismic": {
+    "intensity": 7, "ag": 0.1, "site_class": "II", "tg": 0.45,
+    "ci": 1.0, "cs": 1.0, "cd": 1.0, "damping": 0.05
+  },
+  "curve_radius": 267.463,
+  "grade": 5.8,
+  "_note": "墩高 P1=12m/P2=14m 为演示假定值，正式值需从桥型布置图读取；曲线/纵坡 v1 简化忽略；材料弹性模量按 JTG 3362 取值"
+}

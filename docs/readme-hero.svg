@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">Bridge Report Agent</title>
+  <desc id="desc">桥梁抗震报告与决策 Agent 项目封面，展示桥梁结构与资料交接、工程判定、报告建议的流程。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#071b31"/>
+      <stop offset=".55" stop-color="#102b44"/>
+      <stop offset="1" stop-color="#173e52"/>
+    </linearGradient>
+    <linearGradient id="deck" x2="1" y2="0">
+      <stop stop-color="#67e1cf"/>
+      <stop offset="1" stop-color="#bcebdc"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="1200" height="390" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="390" rx="22" fill="url(#grid)"/>
+  <ellipse cx="1080" cy="64" rx="260" ry="150" fill="#39c9b1" opacity=".12" filter="url(#blur)"/>
+  <ellipse cx="190" cy="360" rx="270" ry="90" fill="#2991b9" opacity=".12" filter="url(#blur)"/>
+
+  <g font-family="Segoe UI, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+    <rect x="54" y="45" width="90" height="28" rx="14" fill="#51d7bc" fill-opacity=".16" stroke="#62ddc7" stroke-opacity=".5"/>
+    <text x="99" y="64" text-anchor="middle" fill="#aef2df" font-size="13" font-weight="700" letter-spacing="1.8">v3.3.0</text>
+    <text x="54" y="127" fill="#ffffff" font-size="43" font-weight="750" letter-spacing="1">桥梁抗震报告与决策</text>
+    <text x="55" y="171" fill="#70e0cb" font-size="29" font-weight="700" letter-spacing="2">BRIDGE REPORT AGENT</text>
+    <text x="56" y="215" fill="#c1d6df" font-size="18">从第三步验算交接，到可追溯的报告与工程建议</text>
+
+    <g transform="translate(55 272)">
+      <rect width="166" height="46" rx="12" fill="#effcf7" fill-opacity=".10" stroke="#a8d8cf" stroke-opacity=".28"/>
+      <circle cx="22" cy="23" r="5" fill="#6de4cb"/>
+      <text x="37" y="29" fill="#e8f5f4" font-size="16">交接资料</text>
+      <path d="M177 23h26m-7-7 7 7-7 7" fill="none" stroke="#8cd7cb" stroke-width="2"/>
+      <rect x="213" width="166" height="46" rx="12" fill="#effcf7" fill-opacity=".10" stroke="#a8d8cf" stroke-opacity=".28"/>
+      <circle cx="235" cy="23" r="5" fill="#6de4cb"/>
+      <text x="250" y="29" fill="#e8f5f4" font-size="16">确定性判定</text>
+      <path d="M390 23h26m-7-7 7 7-7 7" fill="none" stroke="#8cd7cb" stroke-width="2"/>
+      <rect x="426" width="166" height="46" rx="12" fill="#effcf7" fill-opacity=".10" stroke="#a8d8cf" stroke-opacity=".28"/>
+      <circle cx="448" cy="23" r="5" fill="#6de4cb"/>
+      <text x="463" y="29" fill="#e8f5f4" font-size="16">报告与建议</text>
+    </g>
+  </g>
+
+  <g transform="translate(715 83)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 202h430" stroke="#80c9c3" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M18 232h427" stroke="#4a8896" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M25 148h412" stroke="url(#deck)" stroke-width="12"/>
+    <path d="M25 163h412" stroke="#c5fff0" stroke-opacity=".28" stroke-width="2"/>
+    <path d="M105 148v116m255-116v116" stroke="#8ee5d2" stroke-width="13"/>
+    <path d="M119 263h-28m283 0h-28" stroke="#80d8c9" stroke-width="8"/>
+    <path d="M105 148Q232 34 360 148" stroke="#70e3d0" stroke-width="5"/>
+    <path d="M130 128v20m25-38v38m26-53v53m27-59v59m25-61v61m25-59v59m27-53v53m26-38v38m25-20v20" stroke="#93e4d5" stroke-opacity=".75" stroke-width="2"/>
+    <circle cx="232" cy="88" r="5" fill="#d3fff1" stroke="none"/>
+    <path d="M24 276h414" stroke="#6bb9b8" stroke-opacity=".34" stroke-width="2" stroke-dasharray="5 9"/>
+    <path d="M62 201l20 12 23-12 24 12 23-12 23 12 24-12 23 12 23-12 23 12 24-12 23 12 24-12 23 12 23-12 25 12" stroke="#70cfc6" stroke-opacity=".3" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "name": "bridge-drawing-recognition",
+  "version": "0.2.0",
+  "self_contained": true,
+  "entrypoint": "scripts/run_bridge_agent.py",
+  "requirements": "scripts/requirements.txt",
+  "file_count": 21,
+  "files": {
+    "agents/openai.yaml": "ee31a169b1f3d8121cf7d4977907f5cc4d46d9b908e28b6b522d26d4dd88471d",
+    "assets/field_dictionary.csv": "48b74c608003e32f7154b33be6e68afa27d17f779701093ae8983f5b95b7b5dd",
+    "references/field-contract.md": "dd5cd6f532cfad9a01bafa8798d3953dd0bc76665d239fbbe8eb021c90bc194d",
+    "references/vision-backend-contract.md": "7c9354e66bf5e4a060da68fabdf6c5c0e079928743d0082dc4b26e1440b7f116",
+    "references/workflow.md": "b82a2595b7510e6f4720351ff84ed0114d0e23e549a8f16d5f25276ed66a872a",
+    "scripts/bridge_drawing_agent/__init__.py": "f2cfdb2dc17058370a382a674317afc7cd7492706097085396fc3e7ad7790abf",
+    "scripts/bridge_drawing_agent/cli.py": "a59c8345324ff6ded27a7b3f06e7731f268836e600aff3022813d1cf05b80777",
+    "scripts/bridge_drawing_agent/exporter.py": "b4f6194b4a3a1dfda1f18f2475062dcce5c7168638fc1ed633323c9d2276db8f",
+    "scripts/bridge_drawing_agent/extraction.py": "8bfa08dde32e539a1b807df551cfff679f68d866e50275c8c01acab100da137e",
+    "scripts/bridge_drawing_agent/manifest.py": "e326a70e8073af9863e72ea76854768b5f69bba221db89384d4c24f34c39d3b0",
+    "scripts/bridge_drawing_agent/normalization.py": "21569a650c3d8b0d3433bc9e2b8d85400344ec900f8e8b055de152717c542102",
+    "scripts/bridge_drawing_agent/pdfium.py": "7f324e6fe5bcd02b78080d2c173d0ca5bb098582166d00b4b95850e13fcc1d83",
+    "scripts/bridge_drawing_agent/pipeline.py": "2d1368a833aba9e3028d39b44e6d6191959bb69bca14ee44399ad0069386bc65",
+    "scripts/bridge_drawing_agent/utils.py": "682f7019be9b62ac6bf11fb0818e54668b700c032517167432cd42ab89d4d7db",
+    "scripts/bridge_drawing_agent/vision.py": "912d581e3a6240d247335cc962d6894b31bd793b8149f84fbcf0f5ddb1c476c0",
+    "scripts/bridge_drawing_agent/workbook.py": "625c46f3004957873508606e2b4c1c846e8d8f12b0ecc327e8f4a6d72deff217",
+    "scripts/bridge_drawing_agent/xlsx_writer.py": "80c8a5883b9ba3ae553842923b46c427aff22fa8126c58226b6c74c459005085",
+    "scripts/provider_adapter_example.py": "c3fc83512d4728115147b8fa8eabca6f3b212574b471e9116563a77f351b905a",
+    "scripts/requirements.txt": "dc0576182870632b6334dae65bf818ecbdea5271b560680cce6f3964283aeb1d",
+    "scripts/run_bridge_agent.py": "cf5c0a2a68f62e696fadc359e3ed3a9431f2b62b9d2a87d10588a58a1e153e5e",
+    "SKILL.md": "b85ddea4c8669dd907a8c8cbcc6ab2ee75bee41b8a62d8287df0a96d381b8b2f"
+  }
+}

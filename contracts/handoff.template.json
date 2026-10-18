@@ -1,0 +1,59 @@
+{
+  "contract_version": "2.0",
+  "data_kind": "engineering_input",
+  "bridge_id": "填写桥梁唯一编号",
+  "model_revision": "填写原状模型版本或模型文件哈希",
+  "scenario": "original",
+  "project": {
+    "route": "填写路线名称，如 G8511昆磨高速",
+    "program": "填写工程名称（可选）",
+    "stake": "填写桩号，如 K278+308",
+    "stake_line": "填写封面桩号行，如 设计桩号 K278+308",
+    "short_name": "填写图表题注中的桥名简称，如 K278+308",
+    "spans_m": [],
+    "span_text": "填写封面跨径行，如 20m + 33m + 20 m 跨径",
+    "bridge_type": "填写桥型，如 混凝土连续梁桥",
+    "report_title": "抗震验算分析报告",
+    "organization": "土木工程防灾减灾全国重点实验室",
+    "date": "填写报告日期，如 2026.03",
+    "header_text": "填写页眉文字"
+  },
+  "overview": {
+    "description": "填写桥梁概况（桩号范围、孔跨布置、上下部结构形式）",
+    "pier_description": "填写桥墩构造说明",
+    "research_scope": "填写报告主要研究内容",
+    "figures": {"elevation": "立面图资产编号", "pier": "桥墩构造图资产编号"}
+  },
+  "codes": [],
+  "seismic": {
+    "intensity": "填写设防烈度，如 Ⅶ度",
+    "pga_g": 0,
+    "site_class": "填写场地类别，如 Ⅱ类",
+    "tg_s": 0,
+    "category": "填写抗震设防类别，如 B类",
+    "performance_objectives": [],
+    "spectrum": [],
+    "time_history": {"count": 0, "duration_s": 0, "energy_s": 0, "dt_s": 0},
+    "figures": {"wave_spectra": "波谱对比图资产编号", "waves": []}
+  },
+  "materials": {"description": "填写各构件混凝土与钢筋等级", "old_code_conversion": false, "concrete_table": [], "rebar_intro": "", "rebar_table": []},
+  "model": {"software": "填写建模软件与版本", "nodes": 0, "elements": 0},
+  "modal": {"modes": [], "figures": []},
+  "analysis": {
+    "software": "填写分析软件与版本",
+    "converged": false,
+    "axial_sign": "compression_positive",
+    "coordinate_convention": "纵桥向 X，横桥向 Y；弯矩为相应方向映射后的分量",
+    "methods": {"E1": "response_spectrum", "E2": "nonlinear_time_history"}
+  },
+  "scope_review": {"approved": false, "evidence": "填写范围确认证据编号"},
+  "selection": {"method": "填写同类截面分组与典型截面选择依据", "covered_components": [], "limitations": "填写适用范围"},
+  "components": [],
+  "actions": [],
+  "checks": [],
+  "not_applicable": [],
+  "detailing": {"level1": {"rows": []}, "level2": [], "level3": []},
+  "pilecap": {"necessity": "填写承台冲切验算必要性分析", "checks": []},
+  "assets": [],
+  "sources": {}
+}

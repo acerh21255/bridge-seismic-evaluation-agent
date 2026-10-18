@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock.txt
+          python -m pip install -r requirements-pipeline.txt
+
+      - name: Compile sources
+        run: |
+          python -m compileall -q bridge_report tests tools skills/bridge-drawing-recognition/scripts skills/bridge-seismic-pipeline/scripts
+
+      - name: Run unit tests
+        run: python -m unittest discover -v
+
+      - name: Smoke-test drawing recognition
+        shell: pwsh
+        run: |
+          $env:PYTHONPATH = Join-Path $PWD 'skills/bridge-drawing-recognition/scripts'
+          python -m bridge_drawing_agent.cli doctor
+
+      - name: Smoke-test pipeline dry-run
+        run: |
+          python skills/bridge-seismic-pipeline/scripts/run_pipeline.py skills/bridge-seismic-pipeline/scripts/bridge_modeler --outdir build/ci-pipeline --select K44+430

@@ -1,0 +1,37 @@
+{
+  "version": "2.0",
+  "summary": "第三步（建模与数值验算）交给第四步（报告撰写 Agent）的数据合同。单位：力 kN，弯矩 kN*m，位移 m，无量纲 ratio。可提交单个 handoff.json，或 zip（handoff.json + assets/ 图件）。",
+  "sections": [
+    {"name": "标识与版本", "required": true, "fields": ["contract_version", "data_kind", "bridge_id", "model_revision", "scenario"],
+     "description": "每座桥独立编号；原状与加固为不同模型版本，禁止混用。data_kind 区分工程输入、原报告复现与演示变体。"},
+    {"name": "工程信息", "required": true, "fields": ["project.route", "project.stake", "project.short_name", "project.span_text", "project.bridge_type", "project.report_title", "project.organization", "project.date", "project.header_text"],
+     "description": "封面、页眉与图表题注所需信息。"},
+    {"name": "工程概况与规范", "required": false, "fields": ["overview.description", "overview.pier_description", "overview.research_scope", "overview.figures", "codes"],
+     "description": "第 1、2 章文字与立面图、桥墩构造图。缺失时报告以占位呈现并在自检中提示。"},
+    {"name": "地震作用与材料", "required": false, "fields": ["seismic.intensity", "seismic.pga_g", "seismic.site_class", "seismic.tg_s", "seismic.category", "seismic.performance_objectives", "seismic.spectrum", "seismic.time_history", "materials"],
+     "description": "第 3、4 章：设防参数、反应谱参数（Tg、Ci、Cs、Cd、A、Smax，程序据此绘制反应谱）、时程波与材料表。"},
+    {"name": "模型与动力特性", "required": false, "fields": ["model.software", "model.nodes", "model.elements", "model.linear_boundary", "model.foundation.springs", "model.bearings", "modal.modes", "modal.figures"],
+     "description": "第 5 章：建模软件、边界条件、六弹簧刚度、支座参数、振型周期与振型图。"},
+    {"name": "分析状态", "required": true, "fields": ["analysis.converged", "analysis.axial_sign", "analysis.methods.E1", "analysis.methods.E2"],
+     "description": "分析未完成（converged=false）时不得判定；轴力正压负拉；E1/E2 分析方法决定报告表述。"},
+    {"name": "构件与范围", "required": true, "fields": ["components[].id", "components[].kind", "components[].label", "components[].directions", "components[].parent_pier", "scope_review", "selection"],
+     "description": "墩、桩、支座须覆盖纵横桥向；桩基须关联桥墩；典型截面选择依据与范围确认。"},
+    {"name": "成组内力", "required": true, "fields": ["actions[].id", "actions[].component", "actions[].direction", "actions[].level", "actions[].combination", "actions[].N_kN", "actions[].M_kNm"],
+     "description": "E1 截面承载力必须关联同一工况的配对 N/M，不得拼接不同工况的极值。"},
+    {"name": "验算记录", "required": true, "fields": ["checks[].component", "checks[].section_label", "checks[].direction", "checks[].level", "checks[].kind", "checks[].unit", "checks[].demand", "checks[].capacity", "checks[].axial_kN", "checks[].phi", "checks[].limit_status", "checks[].overstrength", "checks[].evidence", "checks[].locator"],
+     "description": "kind：e1_capacity、e2_moment、shear、bearing_displacement、bearing_sliding、measures、hinge_shear、ductility_displacement、ductility_reinforcement、additional。数值缺失填 null，判定为待补正；支座无规范限值时 limit_status=not_provided。"},
+    {"name": "不适用声明", "required": false, "fields": ["not_applicable[].component", "not_applicable[].kind", "not_applicable[].reason", "not_applicable[].evidence"],
+     "description": "有理由和证据的不适用项不阻断流程；无声明的缺项按待补正处理。"},
+    {"name": "构造措施与承台", "required": true, "fields": ["detailing.level1.rows", "detailing.level2", "detailing.level3", "pilecap.necessity", "pilecap.checks"],
+     "description": "一级梁端边距、二级与三级措施逐条满足情况；承台冲切先写必要性，再给斜压杆、拉杆、冲切明细。"},
+    {"name": "加固复核", "required": false, "fields": ["retrofit.model_revision", "retrofit.description", "retrofit.figure", "retrofit.scope_note", "retrofit.checks"],
+     "description": "加固后模型版本的复核记录，报告按“加固前/加固后”并列。"},
+    {"name": "图件与证据", "required": true, "fields": ["assets[].id", "assets[].path", "assets[].caption", "assets[].sha256", "sources"],
+     "description": "图件路径相对交接包目录；证据 inline 校验内容哈希、file 校验文件哈希、external 仅登记。"}
+  ],
+  "downloads": [
+    {"name": "交接空模板 handoff.template.json", "url": "/api/contracts/handoff.template.json"},
+    {"name": "字段校验 Schema handoff.schema.json", "url": "/api/contracts/handoff.schema.json"},
+    {"name": "76K 金标准交接包（示例）", "url": "/api/scenarios/golden-76K"}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "bridge_name": "G8511 K257+528 桥（下行）",
+  "stake": "K257+528",
+  "source_drawing": "D:/G8511筛选结果.xlsx 序号19（Subagent2 筛选结果）",
+  "spans": [{"length": 30}, {"length": 30}, {"length": 30}, {"length": 30}],
+  "piers": [
+    {
+      "pier_id": "P1", "location": 30.0, "height": 8.31,
+      "n_columns": 2, "column_diameter": 1.5, "column_spacing": 6.0,
+      "cap_beam_height": 1.5, "cap_beam_width": 1.7,
+      "pile_diameter": 1.5, "pile_length": 25.0, "soil_m": 10000,
+      "column_material": "C30", "pile_material": "C25"
+    },
+    {
+      "pier_id": "P2", "location": 60.0, "height": 17.13,
+      "n_columns": 2, "column_diameter": 1.5, "column_spacing": 6.0,
+      "cap_beam_height": 1.5, "cap_beam_width": 1.7,
+      "pile_diameter": 1.5, "pile_length": 25.0, "soil_m": 10000,
+      "column_material": "C30", "pile_material": "C25"
+    },
+    {
+      "pier_id": "P3", "location": 90.0, "height": 10.47,
+      "n_columns": 2, "column_diameter": 1.5, "column_spacing": 6.0,
+      "cap_beam_height": 1.5, "cap_beam_width": 1.7,
+      "pile_diameter": 1.5, "pile_length": 25.0, "soil_m": 10000,
+      "column_material": "C30", "pile_material": "C25"
+    }
+  ],
+  "abutments": [
+    {"location": 0.0, "type": "U形桥台", "restraint": "纵向活动"},
+    {"location": 120.0, "type": "U形桥台", "restraint": "纵向活动"}
+  ],
+  "deck": {
+    "girder_type": "空心板", "width": 12.25,
+    "area": 7.5, "inertia_33": 2.5, "inertia_22": 25.0,
+    "torsion_j": 4.0, "shear_as2": 6.3, "shear_as3": 6.3,
+    "unit_weight": 26.0, "material": "C50"
+  },
+  "materials": {
+    "C50": {"name": "C50", "fck": 32.4, "elastic_mod": 34500},
+    "C30": {"name": "C30", "fck": 20.1, "elastic_mod": 30000},
+    "C25": {"name": "C25", "fck": 16.7, "elastic_mod": 28000}
+  },
+  "seismic": {
+    "intensity": 7, "ag": 0.15, "site_class": "II", "tg": 0.45,
+    "ci": 1.0, "cs": 1.0, "cd": 1.0, "damping": 0.05
+  },
+  "bearings": "球型支座",
+  "rebar_info": {"盖梁配筋率": "待图纸", "墩柱配筋率": "待图纸", "桩配筋率": "待图纸"},
+  "_note": "墩高=筛选表左右柱均值(P1:9.79/6.83, P2:17.18/17.07, P3:10.59/10.34)；柱间距6.0m、桩长25m、空心板等效截面、设防参数(7度0.15g II类)为假定值，需图纸/地勘核定"
+}

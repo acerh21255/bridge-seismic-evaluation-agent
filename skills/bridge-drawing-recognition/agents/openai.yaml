@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Bridge Drawing Recognition"
+  short_description: "Recognize bridge drawings into evidence-backed Excel"
+  default_prompt: "Use $bridge-drawing-recognition to process the supplied bridge drawings through the host-provided vision backend, preserve evidence, and export a review workbook without inventing missing values."

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>桥梁抗震报告与决策 Agent</title>
+<link rel="icon" href="/static/favicon.svg">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="桥梁抗震报告与决策 Agent 首页">
+    <svg class="brand-mark" viewBox="0 0 40 24" aria-hidden="true"><path d="M1 8h38M5 8v14M35 8v14M14 8v10M26 8v10M11 22h6M23 22h6M2 22h6M32 22h6"/><path class="arc" d="M14 18q6-7 12 0"/></svg>
+    <span class="brand-text"><strong>桥梁抗震报告与决策 Agent</strong><span>既有桥梁抗震评估 · 第 4 步</span></span>
+  </a>
+  <nav class="topnav" aria-label="工作区">
+    <div class="topnav-flow">
+      <button class="topnav-btn" data-view="intake" aria-current="page"><b>1</b>任务与资料</button>
+      <button class="topnav-btn" data-view="process"><b>2</b>执行过程</button>
+      <button class="topnav-btn" data-view="workbench"><b>3</b>成果与建议</button>
+    </div>
+    <div class="topnav-aux">
+      <button class="topnav-btn" data-view="settings">模型与模板</button>
+      <button class="topnav-btn" data-view="contract">交接规范</button>
+    </div>
+  </nav>
+  <span id="topStatus" class="top-status" role="status"></span>
+</header>
+
+<div class="shell">
+  <aside class="rail">
+    <section class="rail-section">
+      <h2 class="rail-title">工程案例</h2>
+      <div id="scenarioList" class="scenario-list" role="listbox" aria-label="交接数据"></div>
+      <div class="upload" id="upload">
+        <input id="fileInput" type="file" accept=".json,.zip" hidden>
+        <button class="upload-btn" id="uploadBtn" data-icon="plus"><span>导入交接包<small>handoff.json 或含图件的 zip</small></span></button>
+        <div id="uploadState" class="upload-state" hidden></div>
+      </div>
+    </section>
+    <section class="rail-section rail-history">
+      <div class="rail-head"><h2 class="rail-title">运行历史</h2><button class="link-btn" id="refreshHistory" data-icon="refresh">刷新</button></div>
+      <ol id="historyList" class="history-list"></ol>
+    </section>
+  </aside>
+
+  <div class="workspace">
+    <!-- 1 任务与资料 -->
+    <main id="view-intake" class="view">
+      <div class="intake-top">
+        <section class="composer panel" aria-labelledby="composerTitle">
+          <h1 id="composerTitle">生成报告，并给出工程建议</h1>
+          <div id="taskBridge" class="task-bridge"></div>
+          <label class="task-input"><span class="field-label">任务说明 <small>Agent 按这段话组织建议书，可自由修改</small></span>
+            <textarea id="taskText" maxlength="2000" rows="6"></textarea></label>
+          <ol class="gate-steps" aria-label="发起前检查">
+            <li id="stepInspect"><button class="btn-secondary" id="inspectBtn" data-icon="search">检查交接资料</button><span id="readinessBadge" class="step-note">尚未检查</span></li>
+            <li id="stepConfirm"><label class="confirm-label"><input type="checkbox" id="confirmInput" disabled>已核对桥梁与模型版本，确认使用本次交接资料</label></li>
+          </ol>
+          <div class="composer-actions">
+            <div class="mode-switch" role="radiogroup" aria-label="运行模式">
+              <label><input type="radio" name="mode" value="offline" checked><span>离线演示</span></label>
+              <label id="liveMode"><input type="radio" name="mode" value="live" disabled><span>真实模型</span></label>
+            </div>
+            <button class="btn-primary" id="runBtn" disabled>生成报告与建议</button>
+          </div>
+          <p id="agentModeHint" class="mode-hint" role="status"></p>
+        </section>
+
+        <section class="scenarios panel" aria-labelledby="presetTitle">
+          <div class="panel-head"><h2 id="presetTitle">应用场景</h2><span class="panel-hint">选一个问题，Agent 交付报告并写建议书</span></div>
+          <div id="agentPresets" class="preset-list"></div>
+          <p id="presetFeedback" class="fineprint" role="status">选择场景只载入案例与任务说明，点击生成后才调用模型。</p>
+        </section>
+      </div>
+
+      <div class="intake-grid">
+        <section class="panel readiness">
+          <div class="panel-head"><h2>交接完整性</h2><a class="link-btn" href="/api/demo-packages/golden-76K" download="76K278+308-交接包.zip" data-icon="download">76K 交接包</a><a class="link-btn" href="/api/demo-packages/golden-53K" download="53K271+730-交接包.zip" data-icon="download">53K 交接包</a></div>
+          <div id="intakeInventory" class="inventory"></div>
+          <div id="intakeIssues" class="intake-issues"></div>
+        </section>
+        <section class="panel evidence-upload">
+          <div class="panel-head"><h2>原始文件与识别</h2><span class="panel-hint">本地处理，不上传外部服务</span></div>
+          <input type="file" id="rawFiles" multiple accept=".pdf,.s2k,.$2k,.sdb,.sap,.xlsx,.xls,.docx,.png,.jpg,.json" hidden>
+          <button id="rawUploadBtn" class="drop-zone" data-icon="plus"><span>选择原始资料<small>PDF 图纸 · SAP 文本模型 · Excel 验算表</small></span></button>
+          <div id="rawInventory" class="raw-inventory"></div>
+          <p class="fineprint">原始资料只做归档与识别。验算数值须经第三步确认并写入交接合同，不能仅凭图纸开始验算。</p>
+        </section>
+      </div>
+
+      <section class="panel visual-card">
+        <div class="panel-head"><h2>桥梁与有限元模型</h2><span class="panel-hint" id="visualSource">选择案例后载入原始模型</span></div>
+        <div class="visual-grid">
+          <div class="model-stage">
+            <canvas id="modelCanvas" aria-label="有限元模型，拖动旋转，滚轮缩放"></canvas>
+            <div class="model-toolbar"><button data-camera="iso">轴测</button><button data-camera="front">立面</button><button data-camera="top">平面</button><button id="modelShot">导出视图</button></div>
+            <div id="modelStats" class="model-stats">等待模型</div>
+          </div>
+          <div class="drawing-stage">
+            <a id="drawingLink" target="_blank" rel="noopener"><img id="drawingPreview" alt="原始桥梁图纸预览" hidden></a>
+            <p id="drawingCaption">原图纸将在此展示</p>
+            <div id="drawingFacts"></div>
+          </div>
+        </div>
+        <p class="fineprint" id="visualNote">按 SAP 节点和杆件重建，不代表重新求解或自动确认承载能力。</p>
+      </section>
+    </main>
+
+    <!-- 2 执行过程 -->
+    <main id="view-process" class="view" hidden>
+      <div class="page-heading">
+        <div><h1>执行过程</h1><p>每次工具调用、返回摘要与耗时都来自后端实时记录。</p></div>
+        <button class="btn-secondary" data-open="workbench" data-icon="arrow">查看成果与建议</button>
+      </div>
+      <div id="processSummary" class="process-summary">从“任务与资料”发起任务后显示进度。</div>
+      <div class="process-grid">
+        <section class="panel execution-card">
+          <div class="panel-head"><h2>Agent 工具链</h2><span class="panel-hint" id="timelineHint"></span></div>
+          <ol id="timeline" class="timeline" aria-live="polite"></ol>
+          <p id="agentMessage" class="agent-message" hidden></p>
+        </section>
+        <section class="panel event-card">
+          <div class="panel-head"><h2>执行日志</h2><span class="panel-hint">后端事件流</span></div>
+          <ol id="eventLog" class="event-log" aria-live="polite"></ol>
+        </section>
+      </div>
+      <section class="panel">
+        <div class="panel-head"><h2>抗震验算流程</h2><span class="panel-hint" id="pipelineHint"></span></div>
+        <ol id="pipeline" class="pipeline" aria-label="抗震验算流程"></ol>
+      </section>
+    </main>
+
+    <!-- 3 成果与建议 -->
+    <main id="view-workbench" class="view" hidden>
+      <div class="page-heading">
+        <div><h1>成果与建议</h1><p>验算结论来自确定性引擎；建议书是 Agent 的工程判断，需专业复核。</p></div>
+        <button class="btn-secondary" data-open="process">查看执行过程</button>
+      </div>
+      <div id="verdict" class="verdict"></div>
+      <div class="results-layout">
+        <section class="center">
+          <article class="panel advice" aria-labelledby="adviceTitle">
+            <div class="panel-head"><h2 id="adviceTitle">建议书</h2><span id="adviceMeta" class="panel-hint"></span></div>
+            <div id="advice" class="advice-body"></div>
+          </article>
+          <div class="panel card-tabs">
+            <div class="tabs" role="tablist">
+              <button class="tab" role="tab" data-tab="matrix" aria-selected="true">验算明细</button>
+              <button class="tab" role="tab" data-tab="issues" aria-selected="false">待补正与自检<span id="issueCount" class="tab-count" hidden></span></button>
+              <button class="tab" role="tab" data-tab="data" aria-selected="false">交接数据</button>
+            </div>
+            <div id="panel-matrix" class="tab-panel" role="tabpanel"></div>
+            <div id="panel-issues" class="tab-panel" role="tabpanel" hidden></div>
+            <div id="panel-data" class="tab-panel" role="tabpanel" hidden></div>
+          </div>
+        </section>
+        <aside class="side">
+          <section class="panel">
+            <div class="panel-head"><h2>薄弱环节</h2><span id="diagnosisHint" class="panel-hint"></span></div>
+            <div id="diagnosis" class="diagnosis"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>Agent 回复</h2></div>
+            <p id="agentExplanation" class="agent-explanation"></p>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>报告预览</h2><span id="pageHint" class="panel-hint"></span></div>
+            <div id="preview" class="preview"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>交付文件</h2></div>
+            <ul id="files" class="files"></ul>
+            <p class="fineprint">报告用于复现与专业复核，未经工程签发。</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <!-- 模型与模板 -->
+    <main id="view-settings" class="view" hidden>
+      <div class="page-heading"><div><h1>模型与报告模板</h1><p>配置本次服务使用的模型接口与 Word 母版。</p></div></div>
+      <div class="settings-grid">
+        <form id="modelForm" class="panel form-card">
+          <h2>模型连接</h2>
+          <label>接口协议<select id="modelProtocol"><option value="openai-chat">OpenAI Chat Completions</option><option value="openai-responses">OpenAI Responses</option><option value="anthropic-messages">Claude Messages</option></select></label>
+          <label>接口地址<input id="modelUrl" type="url" required placeholder="https://api.example.com/v1"></label>
+          <p class="fineprint" id="protocolHint">OpenAI 可填写服务基础地址（自动补 /v1），也支持完整端点。更换服务地址后需重新填写密钥。</p>
+          <label>模型名称<input id="modelName" required placeholder="填写服务商提供的准确模型 ID"></label>
+          <label>API Key<input id="modelKey" type="password" autocomplete="off" required placeholder="仅保留在本地服务内存"></label>
+          <label>最大输出 tokens<input id="modelTokens" type="number" min="128" max="32768" value="4096" required></label>
+          <div class="form-actions"><button class="btn-primary" type="submit">应用配置</button><button type="button" class="btn-secondary" id="testModel">测试连接与工具调用</button><button type="button" class="link-btn" id="clearModel">清除配置</button></div>
+          <p id="modelFeedback" class="feedback" role="status"></p>
+          <p class="fineprint">应用配置不会调用模型。测试会发送一次不含工程资料的请求，可能产生少量费用。密钥不写入浏览器存储或历史，服务重启后需重新填写。建议书约需 2–4 千输出 tokens，建议最大输出不低于 4096。</p>
+        </form>
+        <div class="panel form-card">
+          <h2>报告母版</h2>
+          <p>下载含封面、章节和表格示例的 DOCX 母版，修改样式后上传，用于之后生成的报告。</p>
+          <a class="btn-secondary download-template" href="/api/template" download data-icon="download">下载系统母版.docx</a>
+          <input id="templateInput" type="file" accept=".docx" hidden>
+          <div class="form-actions"><button class="btn-primary" id="templateUploadBtn">上传修改后的母版</button><button class="link-btn" id="templateReset">恢复系统母版</button></div>
+          <p id="templateFeedback" class="feedback" role="status">当前：系统母版</p>
+          <p class="fineprint">保留三个分节、“报告-”与标题样式及页眉页脚占位符。示例正文生成时会被实际报告替换；编辑示例文字不会改变报告内容。</p>
+        </div>
+      </div>
+      <div id="env" class="env"></div>
+    </main>
+
+    <main id="view-contract" class="view" hidden><div id="contract" class="contract-wrap"></div></main>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="报告页面">
+  <button id="lbClose" class="lb-close" aria-label="关闭" data-icon="close"></button>
+  <button id="lbPrev" class="lb-nav prev" aria-label="上一页" data-icon="left"></button>
+  <figure class="lb-figure"><img id="lbImage" alt=""><figcaption id="lbCaption"></figcaption></figure>
+  <button id="lbNext" class="lb-nav next" aria-label="下一页" data-icon="right"></button>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

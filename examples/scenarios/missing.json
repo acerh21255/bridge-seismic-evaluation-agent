@@ -1,0 +1,2004 @@
+{
+  "contract_version": "2.0",
+  "data_kind": "synthetic_variant",
+  "bridge_id": "G8511-K278+308-missing",
+  "model_revision": "76K278+308-missing-demo",
+  "scenario": "original",
+  "project": {
+    "route": "G8511昆磨高速",
+    "program": "抗震韧性提升工程",
+    "stake": "K278+308",
+    "stake_line": "设计桩号 K278+308",
+    "short_name": "K278+308",
+    "spans_m": [
+      20,
+      33,
+      20
+    ],
+    "span_text": "20m +33m + 20 m 跨径",
+    "bridge_type": "混凝土连续梁桥",
+    "report_title": "抗震验算分析报告",
+    "organization": "土木工程防灾减灾全国重点实验室",
+    "date": "2026.03",
+    "header_text": "G8511昆磨高速设计桩号 K278+308  20+33+20 m连续梁桥"
+  },
+  "overview": {
+    "description": "本桥为上跨主线桥，起点桩号为K0+081.44，终点桩号为K0+166.56。桥孔布置为(20+33+20)米，桥梁总长为85.12米。上部结构采用预应力混凝土连续箱梁，全桥共一联。箱梁为单箱单室断面，顶面宽7.50米，箱底宽4.50米，梁高1.50米，箱梁顶板、底板为平坡。在墩顶位置设置1.50米宽横隔梁。下部结构采用重力式桥台、独立式桥墩，钻孔桩基础。",
+    "pier_description": "该桥墩采用钢筋混凝土空心薄壁式墩身，墩身断面为矩形薄壁结构，基础采用钻孔灌注桩基础。",
+    "research_scope": "本报告主要针对G8511高速公路K278+308桥梁进行抗震性能研究，主要研究内容包括：建立大桥动力分析模型，计算结构的动力特性，完成桥梁地震作用下的响应分析。",
+    "figures": {
+      "elevation": "fig-elevation",
+      "pier": "fig-pier"
+    }
+  },
+  "codes": [
+    "《公路桥梁抗震设计规范》（JTG/T 2231-01-2020）",
+    "《公路工程抗震设计规范》（JTJ 004-89）",
+    "《公路桥涵设计通用规范》（JTJ 021-89）",
+    "《公路钢筋混凝土及预应力混凝土桥涵设计规范》（JTJ 023-85）",
+    "《公路桥涵地基与基础设计规范》（JTJ024-85）",
+    "《公路钢筋混凝土及预应力混凝土桥涵设计规范》（JTG 3362-2018）",
+    "《公路桥涵地基及基础设计规范》（JTG 3363-2019）",
+    "《中国地震动参数区划图》（GB 18306-2015）",
+    "《公路工程抗震规范》（JTG B02-2013）",
+    "《混凝土结构设计规范》（GB 50010-2010 2015年版）",
+    "《公路桥梁盆式橡胶支座交通行业标准》（JT/T 4-1993）",
+    "《公路桥梁盆式橡胶支座》（JT/T 4-2019）",
+    "《公路钢筋混凝土及预应力混凝土桥涵设计规范》（JTG G62-2004）"
+  ],
+  "seismic": {
+    "intensity": "Ⅶ度",
+    "pga_g": 0.1,
+    "site_class": "Ⅱ类",
+    "tg_s": 0.45,
+    "category": "B类",
+    "performance_objectives": [
+      {
+        "category": "B类",
+        "e1_use": "可正常使用",
+        "e1_damage": "结构总体反应在弹性范围，基本无损伤",
+        "e2_use": "经临时加固后可供维修应急交通使用",
+        "e2_damage": "不致倒塌或产生严重结构损伤"
+      }
+    ],
+    "spectrum": [
+      {
+        "level": "E1",
+        "location": "地表面",
+        "site_class": "Ⅱ",
+        "Tg": 0.45,
+        "Ci": 0.43,
+        "Cs": 1.0,
+        "Cd": 1.0,
+        "A": 0.1,
+        "Smax": 0.1075
+      },
+      {
+        "level": "E2",
+        "location": "地表面",
+        "site_class": "Ⅱ",
+        "Tg": 0.45,
+        "Ci": 1.3,
+        "Cs": 1.0,
+        "Cd": 1.0,
+        "A": 0.1,
+        "Smax": 0.325
+      }
+    ],
+    "time_history": {
+      "count": 7,
+      "duration_s": 40,
+      "energy_s": 20,
+      "dt_s": 0.01,
+      "target": "E2"
+    },
+    "figures": {
+      "wave_spectra": "fig-wave-spectra",
+      "waves": [
+        "fig-wave-1",
+        "fig-wave-2",
+        "fig-wave-3",
+        "fig-wave-4",
+        "fig-wave-5",
+        "fig-wave-6",
+        "fig-wave-7"
+      ]
+    }
+  },
+  "materials": {
+    "description": "K278+308桥梁主梁采用50号混凝土；桥面铺装采用40号混凝土；墩柱和桩基采用30号混凝土。",
+    "old_code_conversion": true,
+    "old_code": "《公路钢筋混凝土及预应力混凝土桥涵设计规范》（JTJ 023-85）",
+    "concrete_table": {
+      "header": [
+        "项  目",
+        "25 号混凝土",
+        "30 号混凝土",
+        "50 号混凝土"
+      ],
+      "rows": [
+        [
+          "新强度等级 f_{cu,k}（MPa）",
+          "23.08 (相当于 C23)",
+          "28.26 (相当于 C28)",
+          "48.44 (相当于 C48)"
+        ],
+        [
+          "抗压标准值 f_{ck}（MPa）",
+          "15.44",
+          "18.90",
+          "31.51"
+        ],
+        [
+          "抗拉标准值 f_{tk}（MPa）",
+          "1.70",
+          "1.94",
+          "2.61"
+        ],
+        [
+          "抗压设计值 f_{cd}（MPa）",
+          "10.65",
+          "13.04",
+          "21.73"
+        ],
+        [
+          "抗拉设计值 f_{td}（MPa）",
+          "1.17",
+          "1.34",
+          "1.80"
+        ],
+        [
+          "弹性模量 E_{c}（MPa）",
+          "27000",
+          "29200",
+          "34300"
+        ],
+        [
+          "泊松比 μ",
+          "0.2",
+          "0.2",
+          "0.2"
+        ]
+      ]
+    },
+    "rebar_intro": "钢筋混凝土构件的普通钢筋采用Ⅰ级钢筋和Ⅱ级钢筋",
+    "rebar_table": {
+      "header": [
+        "钢筋种类",
+        "抗拉强度标准值（MPa）",
+        "抗拉设计值（MPa）",
+        "抗压设计值（MPa）",
+        "弹性模量 E_{p}（MPa）"
+      ],
+      "rows": [
+        [
+          "Ⅰ级钢筋",
+          "235",
+          "195",
+          "195",
+          "2.1×10^{5}"
+        ],
+        [
+          "Ⅱ级钢筋",
+          "335",
+          "280",
+          "280",
+          "2.0×10^{5}"
+        ]
+      ]
+    }
+  },
+  "model": {
+    "software": "SAP 2000 v22",
+    "nodes": 24,
+    "elements": 13,
+    "figures": {
+      "fe_model": "fig-fe-model",
+      "bearing_layout": "fig-bearing-layout",
+      "fiber_pile": "fig-fiber-pile",
+      "fiber_pier": "fig-fiber-pier"
+    },
+    "linear_boundary": {
+      "header": [
+        "位置",
+        "x",
+        "y",
+        "z",
+        "θx",
+        "θy",
+        "θz"
+      ],
+      "rows": [
+        [
+          "桥台-主梁",
+          "E",
+          "E",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "桥墩-主梁",
+          "E",
+          "E",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "notes": [
+        "注：x为纵桥向，y为横桥向，z为竖向。“0”表示无主从约束，“1”表示主从约束，“E”表示弹性约束。"
+      ]
+    },
+    "foundation": {
+      "springs": {
+        "header": [
+          "墩号",
+          "Ux（kN/m)",
+          "Uy（kN/m)",
+          "Uz（kN/m)",
+          "θx（kN.m/rad)",
+          "θy（kN.m/rad)",
+          "θz（kN.m/rad)"
+        ],
+        "rows": [
+          [
+            "1#桥墩",
+            "1020000",
+            "1260000",
+            "6550000",
+            "4620000",
+            "19000000",
+            "3720000"
+          ],
+          [
+            "2#桥墩",
+            "1020000",
+            "1260000",
+            "6550000",
+            "4620000",
+            "19000000",
+            "3720000"
+          ]
+        ]
+      },
+      "notes": [
+        "注：1）x为纵桥向，y为横桥向，z为竖向；",
+        "2）Ux、Uy、Uz、θx、θy和θz分别代表沿x，y和z轴的平动刚度和转动刚度。"
+      ]
+    },
+    "bearings": {
+      "description": "0#及3#桥台处支座采用GPZ1500DX及SX型橡胶支座，1#桥墩和2#桥墩处支座采用GPZ6000GD型橡胶支座。",
+      "family": "盆式橡胶支座",
+      "model_name": "GPZ",
+      "nonlinear_boundary": {
+        "header": [
+          "位 置",
+          "△x",
+          "△y",
+          "△z",
+          "θx",
+          "θy",
+          "θz"
+        ],
+        "rows": [
+          [
+            "0#桥台左",
+            "PZ",
+            "PZ",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0#桥台右",
+            "PZ",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1#桥墩",
+            "1",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "2#桥墩",
+            "PZ",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3#桥台左",
+            "PZ",
+            "PZ",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3#桥台右",
+            "PZ",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "notes": [
+          "注：(1) 0表示自由，1表示主从或固结；",
+          "(2) x、y、z分别表示顺桥向、横向以及竖向；",
+          "(3) PZ表示按非线性参数取值，具体模拟方式见下节。"
+        ]
+      },
+      "parameters": {
+        "clauses": "第6.2.7条及第10.3.3条",
+        "mu_d": 0.02,
+        "post_yield_ratio": 0.0001,
+        "yield_exponent": 20
+      },
+      "types": [
+        {
+          "name": "GPZ1500DX/SX",
+          "position": "桥台",
+          "Fmax_kN": 15.04,
+          "xy_m": 0.002,
+          "k_kN_m": 7520.1
+        },
+        {
+          "name": "GPZ6000GD/SX",
+          "position": "桥墩",
+          "Fmax_kN": 91.44,
+          "xy_m": 0.002,
+          "k_kN_m": 45722.1
+        }
+      ]
+    }
+  },
+  "modal": {
+    "modes": [
+      {
+        "n": 1,
+        "period_s": 1.007,
+        "frequency_hz": 0.993
+      },
+      {
+        "n": 2,
+        "period_s": 0.269,
+        "frequency_hz": 3.711
+      },
+      {
+        "n": 3,
+        "period_s": 0.156,
+        "frequency_hz": 6.43
+      },
+      {
+        "n": 4,
+        "period_s": 0.112,
+        "frequency_hz": 8.904
+      },
+      {
+        "n": 5,
+        "period_s": 0.094,
+        "frequency_hz": 10.583
+      },
+      {
+        "n": 6,
+        "period_s": 0.078,
+        "frequency_hz": 12.833
+      },
+      {
+        "n": 7,
+        "period_s": 0.075,
+        "frequency_hz": 13.299
+      },
+      {
+        "n": 8,
+        "period_s": 0.072,
+        "frequency_hz": 13.797
+      },
+      {
+        "n": 9,
+        "period_s": 0.063,
+        "frequency_hz": 15.937
+      },
+      {
+        "n": 10,
+        "period_s": 0.05,
+        "frequency_hz": 20.112
+      }
+    ],
+    "figures": [
+      {
+        "asset": "fig-mode-1",
+        "caption": "第一阶振型"
+      },
+      {
+        "asset": "fig-mode-2",
+        "caption": "第二阶振型"
+      },
+      {
+        "asset": "fig-mode-3",
+        "caption": "第三阶振型"
+      },
+      {
+        "asset": "fig-mode-4",
+        "caption": "第四阶振型"
+      },
+      {
+        "asset": "fig-mode-5",
+        "caption": "第五阶振型"
+      }
+    ]
+  },
+  "analysis": {
+    "software": "SAP 2000 v22",
+    "converged": true,
+    "axial_sign": "compression_positive",
+    "coordinate_convention": "模型总体坐标轴以顺桥向为 X 轴，横桥向为 Y 轴，竖向为 Z 轴",
+    "methods": {
+      "E1": "response_spectrum",
+      "E2": "nonlinear_time_history"
+    }
+  },
+  "scope_review": {
+    "approved": true,
+    "evidence": "orig-76K",
+    "note": "关键截面沿用原报告选取：纵桥向取墩底、横桥向取墩顶，桩基取桩顶"
+  },
+  "selection": {
+    "method": "沿用原报告选取的关键截面",
+    "covered_components": [
+      "P1",
+      "P2",
+      "F1",
+      "F2",
+      "B0",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "limitations": "原报告未提供同类截面分组与候选截面清单"
+  },
+  "components": [
+    {
+      "id": "P1",
+      "kind": "pier",
+      "label": "1#墩",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "P2",
+      "kind": "pier",
+      "label": "2#墩",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "F1",
+      "kind": "pile",
+      "label": "1#桩",
+      "parent_pier": "P1",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "pile",
+      "label": "2#桩",
+      "parent_pier": "P2",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "B0",
+      "kind": "bearing",
+      "label": "0#桥台",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "B1",
+      "kind": "bearing",
+      "label": "1#桥墩",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "B2",
+      "kind": "bearing",
+      "label": "2#桥墩",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    },
+    {
+      "id": "B3",
+      "kind": "bearing",
+      "label": "3#桥台",
+      "directions": [
+        "longitudinal",
+        "transverse"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "E1-P1-L",
+      "component": "P1",
+      "direction": "longitudinal",
+      "level": "E1",
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "1#墩底",
+      "N_kN": 4708.7,
+      "M_kNm": 4266.0
+    },
+    {
+      "id": "E1-P2-L",
+      "component": "P2",
+      "direction": "longitudinal",
+      "level": "E1",
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "2#墩底",
+      "N_kN": 4693.1,
+      "M_kNm": 153.0
+    },
+    {
+      "id": "E1-F1-L",
+      "component": "F1",
+      "direction": "longitudinal",
+      "level": "E1",
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "1#桩顶",
+      "N_kN": 4532.0,
+      "M_kNm": 295.0
+    },
+    {
+      "id": "E1-F2-L",
+      "component": "F2",
+      "direction": "longitudinal",
+      "level": "E1",
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "2#桩顶",
+      "N_kN": 2716.0,
+      "M_kNm": 24.0
+    },
+    {
+      "id": "E1-P1-T",
+      "component": "P1",
+      "direction": "transverse",
+      "level": "E1",
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "1#墩顶",
+      "N_kN": 4716.2,
+      "M_kNm": 446.0
+    },
+    {
+      "id": "E1-P2-T",
+      "component": "P2",
+      "direction": "transverse",
+      "level": "E1",
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "2#墩顶",
+      "N_kN": 4715.8,
+      "M_kNm": 447.0
+    },
+    {
+      "id": "E1-F1-T",
+      "component": "F1",
+      "direction": "transverse",
+      "level": "E1",
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "1#桩顶",
+      "N_kN": 2645.0,
+      "M_kNm": 158.0
+    },
+    {
+      "id": "E1-F2-T",
+      "component": "F2",
+      "direction": "transverse",
+      "level": "E1",
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "station": "2#桩顶",
+      "N_kN": 2644.0,
+      "M_kNm": 158.0
+    }
+  ],
+  "checks": [
+    {
+      "component": "P1",
+      "section_label": "1#墩底",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 4708.7,
+      "capacity": 5370.54,
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-1",
+      "action_id": "E1-P1-L",
+      "paired_N_M": {
+        "N_kN": 4708.7,
+        "M_kNm": 4266.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩底",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 4693.1,
+      "capacity": 25175.19,
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-1",
+      "action_id": "E1-P2-L",
+      "paired_N_M": {
+        "N_kN": 4693.1,
+        "M_kNm": 153.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 4532.0,
+      "capacity": 10930.3,
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-2",
+      "action_id": "E1-F1-L",
+      "paired_N_M": {
+        "N_kN": 4532.0,
+        "M_kNm": 295.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 2716.0,
+      "capacity": 18042.14,
+      "combination": "恒载+E1纵向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-2",
+      "action_id": "E1-F2-L",
+      "paired_N_M": {
+        "N_kN": 2716.0,
+        "M_kNm": 24.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "B0",
+      "section_label": "0#桥台",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.014,
+      "capacity": null,
+      "combination": "恒载+E1纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-3",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B1",
+      "section_label": "1#桥墩",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E1纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-3",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B2",
+      "section_label": "2#桥墩",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.014,
+      "capacity": null,
+      "combination": "恒载+E1纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-3",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B3",
+      "section_label": "3#桥台",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.014,
+      "capacity": null,
+      "combination": "恒载+E1纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-3",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩顶",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 4716.2,
+      "capacity": 21419.31,
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-4",
+      "action_id": "E1-P1-T",
+      "paired_N_M": {
+        "N_kN": 4716.2,
+        "M_kNm": 446.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩顶",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 4715.8,
+      "capacity": 21434.66,
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-4",
+      "action_id": "E1-P2-T",
+      "paired_N_M": {
+        "N_kN": 4715.8,
+        "M_kNm": 447.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 2645.0,
+      "capacity": 11056.58,
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-5",
+      "action_id": "E1-F1-T",
+      "paired_N_M": {
+        "N_kN": 2645.0,
+        "M_kNm": 158.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "e1_capacity",
+      "unit": "kN",
+      "demand": 2644.0,
+      "capacity": 11056.04,
+      "combination": "恒载+E1横向（最不利轴力=恒载轴力−地震轴力）",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-5",
+      "action_id": "E1-F2-T",
+      "paired_N_M": {
+        "N_kN": 2644.0,
+        "M_kNm": 158.0
+      },
+      "method": "constant_eccentricity"
+    },
+    {
+      "component": "B0",
+      "section_label": "0#桥台",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E1横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-6",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B1",
+      "section_label": "1#桥墩",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E1横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-6",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B2",
+      "section_label": "2#桥墩",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E1横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-6",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B3",
+      "section_label": "3#桥台",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E1横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-6",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩底",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 7503.0,
+      "capacity": 5902.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-7",
+      "axial_kN": 4648.8
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩底",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 1190.0,
+      "capacity": 5896.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-7",
+      "axial_kN": 4632.2
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩底",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 1143.5,
+      "capacity": 6017.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-8",
+      "axial_kN": 4648.8
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩底",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 182.1,
+      "capacity": 4243.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-8",
+      "axial_kN": 4632.2
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 514.4,
+      "capacity": 4219.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-9",
+      "axial_kN": 5915.0
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 117.7,
+      "capacity": 3715.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-9",
+      "axial_kN": 3180.0
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 566.9,
+      "capacity": 7214.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-10",
+      "axial_kN": 5915.0
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 132.5,
+      "capacity": 4839.0,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-10",
+      "axial_kN": 3180.0
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 1748.0,
+      "capacity": 5926.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-12",
+      "axial_kN": 4713.2
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 1750.0,
+      "capacity": 5926.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-12",
+      "axial_kN": 4712.8
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 325.7,
+      "capacity": 6022.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-13",
+      "axial_kN": 4713.2
+    },
+    {
+      "component": "P2",
+      "section_label": "2#墩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 326.6,
+      "capacity": 4243.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-13",
+      "axial_kN": 4712.8
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 626.5,
+      "capacity": 3579.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-14",
+      "axial_kN": 2643.0
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "e2_moment",
+      "unit": "kN*m",
+      "demand": 625.8,
+      "capacity": null,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "variant-note",
+      "locator": "演示变体修改",
+      "axial_kN": 2643.0
+    },
+    {
+      "component": "F1",
+      "section_label": "1#桩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 207.6,
+      "capacity": 6003.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-15",
+      "axial_kN": 2643.0
+    },
+    {
+      "component": "F2",
+      "section_label": "2#桩顶",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "shear",
+      "unit": "kN",
+      "demand": 207.3,
+      "capacity": 4096.0,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-15",
+      "axial_kN": 2643.0
+    },
+    {
+      "component": "B0",
+      "section_label": "0#桥台",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.024,
+      "capacity": null,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-11",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B1",
+      "section_label": "1#桥墩",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-11",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B2",
+      "section_label": "2#桥墩",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.022,
+      "capacity": null,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-11",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B3",
+      "section_label": "3#桥台",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.024,
+      "capacity": null,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-11",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B0",
+      "section_label": "0#桥台",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-16",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B1",
+      "section_label": "1#桥墩",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-16",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B2",
+      "section_label": "2#桥墩",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-16",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "B3",
+      "section_label": "3#桥台",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_displacement",
+      "unit": "m",
+      "demand": 0.0,
+      "capacity": null,
+      "combination": "恒载+E2横向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表6.3-16",
+      "limit_status": "not_provided"
+    },
+    {
+      "component": "P1",
+      "section_label": "1#墩底",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "hinge_shear",
+      "unit": "kN",
+      "demand": 1143.5,
+      "capacity": 538.013,
+      "combination": "恒载+E2纵向",
+      "model_revision": "76K278+308-missing-demo",
+      "evidence": "orig-76K",
+      "locator": "原表7.1-1",
+      "axial_kN": 4648.8,
+      "phi": 0.9
+    }
+  ],
+  "not_applicable": [
+    {
+      "component": "B0",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B1",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B2",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B3",
+      "direction": "longitudinal",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B0",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B1",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B2",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B3",
+      "direction": "transverse",
+      "level": "E1",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B0",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B1",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B2",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B3",
+      "direction": "longitudinal",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B0",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B1",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B2",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    },
+    {
+      "component": "B3",
+      "direction": "transverse",
+      "level": "E2",
+      "kind": "bearing_sliding",
+      "reason": "盆式橡胶支座（GPZ），原报告未列支座抗滑移验算，暂列为不适用，待补充依据",
+      "evidence": "orig-76K"
+    }
+  ],
+  "detailing": {
+    "level1": {
+      "rows": [
+        {
+          "location": "0#桥台",
+          "design_cm": 110.0,
+          "required_cm": 72.2
+        },
+        {
+          "location": "3#桥台",
+          "design_cm": 110.0,
+          "required_cm": 72.2
+        }
+      ]
+    },
+    "level2": [
+      {
+        "clause": "11.3.2",
+        "requirement": "对于采用简支梁和桥面连续的桥梁，其墩高不宜超过40m",
+        "design": "最高墩高6.56 m",
+        "satisfied": true,
+        "topic": "墩高限值"
+      },
+      {
+        "clause": "11.3.7",
+        "requirement": "梁式桥应在横桥向和纵桥向设置防止上部结构落梁的挡块或抗震锚栓",
+        "design": "桥台桥墩设计挡块",
+        "satisfied": true,
+        "topic": "桥台、桥墩挡块设置"
+      }
+    ],
+    "level3": [
+      {
+        "clause": "11.4.3",
+        "requirement": "应采用合理的限位装置，防止结构相邻构件产生过大的相对位移",
+        "design": "桥台、桥墩设置限位装置",
+        "satisfied": true,
+        "topic": "限位装置设置"
+      },
+      {
+        "clause": "11.4.9",
+        "requirement": "桥梁下部为钢筋混凝土结构时，其混凝土强度等级不应低于C30",
+        "design": "墩柱和桩基采用C30",
+        "satisfied": true,
+        "topic": "下部结构混凝土强度等级"
+      }
+    ]
+  },
+  "pilecap": {
+    "checks": [
+      {
+        "id": "strut",
+        "title": "承台斜压杆承载力验算",
+        "direction": "transverse",
+        "header": [
+          "斜压杆承载力",
+          "单位",
+          "数值"
+        ],
+        "rows": [
+          [
+            "单桩最大反力设计值N1d",
+            "kN",
+            "2648"
+          ],
+          [
+            "计算方向桩基根数n",
+            "颗",
+            "2"
+          ],
+          [
+            "结构重要性系数γ0",
+            "-",
+            "1.0"
+          ],
+          [
+            "钢筋抗拉强度设计值fsd",
+            "MPa",
+            "335"
+          ],
+          [
+            "钢筋弹模Es",
+            "MPa",
+            "29162"
+          ],
+          [
+            "混凝土抗压强度设计值fcd",
+            "MPa",
+            "13.04"
+          ],
+          [
+            "混凝土抗拉强度设计值ftd",
+            "MPa",
+            "1.34"
+          ],
+          [
+            "混凝土强度等级βc",
+            "-",
+            "1.00"
+          ],
+          [
+            "桩基直径D",
+            "cm",
+            "120"
+          ],
+          [
+            "承台高度",
+            "cm",
+            "150"
+          ],
+          [
+            "受拉钢筋截面重心至受拉边缘距离as",
+            "cm",
+            "6.40"
+          ],
+          [
+            "有效高度h0",
+            "cm",
+            "143.60"
+          ],
+          [
+            "墩中心至墩身边缘距离x1",
+            "cm",
+            "75.00"
+          ],
+          [
+            "压杆压力线在承台顶面的作用点至墩台边缘的距离a",
+            "cm",
+            "21.54"
+          ],
+          [
+            "压杆压力线与拉杆拉力线的夹角θ1",
+            "弧度",
+            "0.978915"
+          ],
+          [
+            "压杆压力设计值C1d",
+            "kN",
+            "6382"
+          ],
+          [
+            "桩基支撑面计算宽度b",
+            "cm",
+            "96.00"
+          ],
+          [
+            "拉杆钢筋直径d",
+            "mm",
+            "28.00"
+          ],
+          [
+            "拉杆钢筋的顶层钢筋中心至承台底的距离s",
+            "cm",
+            "21.30"
+          ],
+          [
+            "ha",
+            "cm",
+            "38.10"
+          ],
+          [
+            "压杆计算高度t",
+            "cm",
+            "100.93"
+          ],
+          [
+            "与压杆相应的拉杆拉力设计值T1d",
+            "kN",
+            "3560"
+          ],
+          [
+            "拉杆钢筋截面面积AS",
+            "mm2",
+            "10628.11"
+          ],
+          [
+            "最小配筋率百分比ρ",
+            "%",
+            "0.18"
+          ],
+          [
+            "",
+            "%",
+            "0.20"
+          ],
+          [
+            "ε1",
+            "-",
+            "0.00"
+          ],
+          [
+            "fce,d",
+            "MPa",
+            "13.63"
+          ],
+          [
+            "压杆计算宽度bs",
+            "cm",
+            "405.00"
+          ],
+          [
+            "tbsfce,d",
+            "kN",
+            "45292"
+          ],
+          [
+            "γ0C1d",
+            "kN",
+            "6382"
+          ]
+        ],
+        "demand": 6382.0,
+        "capacity": 45292.0,
+        "evidence": "orig-76K",
+        "locator": "原表6.3-17"
+      },
+      {
+        "id": "tie",
+        "title": "承台拉杆承载力验算",
+        "direction": "transverse",
+        "header": [
+          "拉杆承载力",
+          "单位",
+          "数值"
+        ],
+        "rows": [
+          [
+            "T1d",
+            "kN",
+            "3560"
+          ],
+          [
+            "γ0T1d",
+            "kN",
+            "3560"
+          ],
+          [
+            "fsdAs",
+            "kN",
+            "10050"
+          ]
+        ],
+        "demand": 3560.0,
+        "capacity": 10050.0,
+        "evidence": "orig-76K",
+        "locator": "原表6.3-18"
+      },
+      {
+        "id": "punching",
+        "title": "承台冲切承载力验算",
+        "direction": "transverse",
+        "header": [
+          "墩身向下冲切承载力",
+          "单位",
+          "数值"
+        ],
+        "rows": [
+          [
+            "圆桩换算成方桩边长b",
+            "cm",
+            "96"
+          ],
+          [
+            "墩身边缘至方桩边缘水平距离ax",
+            "cm",
+            "15"
+          ],
+          [
+            "墩身边缘至方桩边缘水平距离ay",
+            "cm",
+            "0"
+          ],
+          [
+            "冲切面与水平面夹角θ",
+            "弧度",
+            "1.373400767"
+          ],
+          [
+            "冲跨比λx",
+            "-",
+            "0.2"
+          ],
+          [
+            "冲跨比λy",
+            "-",
+            "0.2"
+          ],
+          [
+            "冲切承载力系数αpx",
+            "-",
+            "3"
+          ],
+          [
+            "冲切承载力系数αpy",
+            "-",
+            "3"
+          ],
+          [
+            "桥墩底面边长bx",
+            "cm",
+            "150"
+          ],
+          [
+            "桥墩底面边长by",
+            "cm",
+            "150"
+          ],
+          [
+            "桥墩竖向力设计值Fld",
+            "kN",
+            "2648"
+          ],
+          [
+            "γ0Fld",
+            "kN",
+            "2648"
+          ],
+          [
+            "公式(8.5.5-1)右侧计算式",
+            "kN",
+            "24739"
+          ]
+        ],
+        "demand": 2648.0,
+        "capacity": 24739.0,
+        "evidence": "orig-76K",
+        "locator": "原表6.3-19"
+      }
+    ]
+  },
+  "retrofit": {
+    "model_revision": "76K278+308-missing-demo-retrofit",
+    "description": "为提高桥墩全截面抗弯和抗剪承载力，拟对桥墩采取外包 15cm 厚 ECC 混凝土增大截面加固，配置环向箍筋和纵筋，箍筋选用φ12mm箍筋，间距8cm。",
+    "scope_note": "加固后复核范围为E2纵桥向1#墩底截面",
+    "figure": {
+      "assets": [
+        "fig-retrofit-1",
+        "fig-retrofit-2"
+      ],
+      "caption": "桥墩增大截面设计图（单位：cm）"
+    },
+    "checks": [
+      {
+        "component": "P1",
+        "section_label": "1#墩底",
+        "direction": "longitudinal",
+        "level": "E2",
+        "kind": "e2_moment",
+        "unit": "kN*m",
+        "demand": 9519.6,
+        "capacity": 7358.0,
+        "combination": "恒载+E2纵向",
+        "model_revision": "76K278+308-missing-demo-retrofit",
+        "evidence": "orig-76K",
+        "locator": "原表8-1"
+      },
+      {
+        "component": "P1",
+        "section_label": "1#墩底",
+        "direction": "longitudinal",
+        "level": "E2",
+        "kind": "hinge_shear",
+        "unit": "kN",
+        "demand": 1459.9,
+        "capacity": 3195.7,
+        "combination": "恒载+E2纵向",
+        "model_revision": "76K278+308-missing-demo-retrofit",
+        "evidence": "orig-76K",
+        "locator": "原表8-2",
+        "phi": 0.9
+      },
+      {
+        "component": "P1",
+        "section_label": "1#墩底",
+        "direction": "longitudinal",
+        "level": "E2",
+        "kind": "ductility_displacement",
+        "unit": "m",
+        "demand": 0.0213,
+        "capacity": 0.1,
+        "combination": "恒载+E2纵向",
+        "model_revision": "76K278+308-missing-demo-retrofit",
+        "evidence": "orig-76K",
+        "locator": "原表8-3"
+      },
+      {
+        "component": "P1",
+        "section_label": "1#墩底",
+        "direction": "longitudinal",
+        "level": "E2",
+        "kind": "ductility_reinforcement",
+        "unit": "ratio",
+        "demand": 0.004,
+        "capacity": 0.00436,
+        "combination": "恒载+E2纵向",
+        "model_revision": "76K278+308-missing-demo-retrofit",
+        "evidence": "orig-76K",
+        "locator": "原表8-4"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "id": "fig-elevation",
+      "path": "../golden/76K278+308/assets/fig-elevation.png",
+      "caption": "K278+308桥梁立面图（单位：cm）",
+      "width_cm": 15.96,
+      "sha256": "0d04e61ff855898ee47262fc77d313c57cd0abf6057358296d3ddb500e0b0080"
+    },
+    {
+      "id": "fig-pier",
+      "path": "../golden/76K278+308/assets/fig-pier.png",
+      "caption": "K278+308桥梁桥墩构造图（单位：cm）",
+      "width_cm": 9.77,
+      "sha256": "f870058bbb260d424cd1feabf0127e2afe26e114083d3682f703fe05530d3754"
+    },
+    {
+      "id": "fig-wave-1",
+      "path": "../golden/76K278+308/assets/fig-wave-1.png",
+      "caption": "E2 地震波加速度时程-第 1 条",
+      "width_cm": 15.98,
+      "sha256": "994acfbad9dedbc4807ad4182474daace66da0c82fa9a48d8017ef9f84228794"
+    },
+    {
+      "id": "fig-wave-2",
+      "path": "../golden/76K278+308/assets/fig-wave-2.png",
+      "caption": "E2 地震波加速度时程-第 2 条",
+      "width_cm": 15.98,
+      "sha256": "c6b699369b3db25688048b0334b252d29da0e2ed53c1d68f4cc7cb87b9a42c41"
+    },
+    {
+      "id": "fig-wave-3",
+      "path": "../golden/76K278+308/assets/fig-wave-3.png",
+      "caption": "E2 地震波加速度时程-第 3 条",
+      "width_cm": 15.98,
+      "sha256": "364bd3de5f25317f82650b90bcd432e735b869d9c1c5795085265afe277a39a4"
+    },
+    {
+      "id": "fig-wave-4",
+      "path": "../golden/76K278+308/assets/fig-wave-4.png",
+      "caption": "E2 地震波加速度时程-第 4 条",
+      "width_cm": 15.98,
+      "sha256": "1715582abe8fbe0baf4599fc8e8c92bcc72eea923afa8f0281ccb19eb4a70f8e"
+    },
+    {
+      "id": "fig-wave-5",
+      "path": "../golden/76K278+308/assets/fig-wave-5.png",
+      "caption": "E2 地震波加速度时程-第 5 条",
+      "width_cm": 15.98,
+      "sha256": "25bd469d24e557d81f05ba5dd73a64a2f8ff7bfb72992f0caf4e1306129a6df0"
+    },
+    {
+      "id": "fig-wave-6",
+      "path": "../golden/76K278+308/assets/fig-wave-6.png",
+      "caption": "E2 地震波加速度时程-第 6 条",
+      "width_cm": 15.98,
+      "sha256": "72cd420656aa3cac22b0e9d6d8e6db634b8e935862c1b7b0ea497b6a8954ec09"
+    },
+    {
+      "id": "fig-wave-7",
+      "path": "../golden/76K278+308/assets/fig-wave-7.png",
+      "caption": "E2 地震波加速度时程-第 7 条",
+      "width_cm": 15.98,
+      "sha256": "abd0cf3a2ed47c5aa35268f14fd414f5bbdaff2b9d8bc955f32b0edf9bd5b2cf"
+    },
+    {
+      "id": "fig-wave-spectra",
+      "path": "../golden/76K278+308/assets/fig-wave-spectra.png",
+      "caption": "各条地震波的加速度反应谱与规范对比",
+      "width_cm": 16.0,
+      "sha256": "89a7776afe3b3278b43fc43014dffb41ba4b1513a8d5ae5b1e864a6236dc6440",
+      "note": "据原报告内嵌图表数据（chart3）以 matplotlib 重绘"
+    },
+    {
+      "id": "fig-fe-model",
+      "path": "../golden/76K278+308/assets/fig-fe-model.png",
+      "caption": "K278+308有限元模型",
+      "width_cm": 15.98,
+      "sha256": "ea875431f280c7a6eb864757205133d4b2c7fa326f0fffe9d64958b34dc7189f"
+    },
+    {
+      "id": "fig-bearing-layout",
+      "path": "../golden/76K278+308/assets/fig-bearing-layout.png",
+      "caption": "支座垫石布置图",
+      "width_cm": 15.97,
+      "sha256": "fd172b228b6cb382253208db8ce0fbbe7a7b9435b86223e2792ea9e5bda4456f"
+    },
+    {
+      "id": "fig-mode-1",
+      "path": "../golden/76K278+308/assets/fig-mode-1.png",
+      "caption": "第一阶振型",
+      "width_cm": 15.96,
+      "sha256": "0ddd39af40fdae666aa52df6fc2aab7a84e4915bb6bb9fe0b87635f92d387f9d"
+    },
+    {
+      "id": "fig-mode-2",
+      "path": "../golden/76K278+308/assets/fig-mode-2.png",
+      "caption": "第二阶振型",
+      "width_cm": 15.96,
+      "sha256": "fde1c168c27f57d2cba701d19b8318924d08d4048737c616771d4d07729b2f33"
+    },
+    {
+      "id": "fig-mode-3",
+      "path": "../golden/76K278+308/assets/fig-mode-3.png",
+      "caption": "第三阶振型",
+      "width_cm": 16.0,
+      "sha256": "6a697f22c54c5821d3e36fcb6f853127562bd5f9d1c38d64f50a775189f33278"
+    },
+    {
+      "id": "fig-mode-4",
+      "path": "../golden/76K278+308/assets/fig-mode-4.png",
+      "caption": "第四阶振型",
+      "width_cm": 15.96,
+      "sha256": "6a8ef828b4312518e62983a369dd973d1c9ea8c76c91fd1ae5d6cc4b61e28e27"
+    },
+    {
+      "id": "fig-mode-5",
+      "path": "../golden/76K278+308/assets/fig-mode-5.png",
+      "caption": "第五阶振型",
+      "width_cm": 15.97,
+      "sha256": "615c650ee2002cf9e3dc1d2d86b8e2c06a878dde635a0206fbe2c80da07520ae"
+    },
+    {
+      "id": "fig-fiber-pile",
+      "path": "../golden/76K278+308/assets/fig-fiber-pile.png",
+      "caption": "桩基截面纤维模型",
+      "width_cm": 7.4,
+      "sha256": "02232d22731401b9407b0eeb3fcd6376671e7339de9d1275e21a5dd66f585dc5"
+    },
+    {
+      "id": "fig-fiber-pier",
+      "path": "../golden/76K278+308/assets/fig-fiber-pier.png",
+      "caption": "桥墩截面纤维模型",
+      "width_cm": 7.29,
+      "sha256": "8c44e9acee5b40120b77f80858cd7efc015c4515cc15d57b8d36d6958d5fd29a"
+    },
+    {
+      "id": "fig-retrofit-1",
+      "path": "../golden/76K278+308/assets/fig-retrofit-1.png",
+      "caption": "桥墩增大截面设计图（单位：cm）",
+      "width_cm": 13.89,
+      "sha256": "aabfb646f03598f3a0ef8a9ef54b79556f200fff289857d253f74f5a44e4d3c8"
+    },
+    {
+      "id": "fig-retrofit-2",
+      "path": "../golden/76K278+308/assets/fig-retrofit-2.png",
+      "caption": "桥墩增大截面设计图（单位：cm）",
+      "width_cm": 6.62,
+      "sha256": "1064165d6f8c8cb2346a55afe0be5182a35ff2128b1f27cd439000171422c135"
+    }
+  ],
+  "sources": {
+    "orig-76K": {
+      "kind": "external",
+      "title": "G8511 76K278+308 (20m+33m+20m) 抗震设计验算报告（原件）",
+      "sha256": "a6c2093be18799c817aa60333eda30601b57dc532033b7c05f21a0ddb1cb6ca6",
+      "note": "位于 templates/reference；数值由 tools/extract_golden.py 按原表逐项抽取"
+    },
+    "variant-note": {
+      "kind": "inline",
+      "title": "演示变体说明：资料缺失",
+      "content": {
+        "variant": "missing",
+        "changes": [
+          "三级抗震措施“限位装置”改为已设置",
+          "删除 2#桩顶 E2 横桥向等效屈服弯矩"
+        ],
+        "statement": "演示变体：数据经人为修改，不代表实桥结论"
+      },
+      "sha256": "1caf14835287f4e91f12d33276f64919559489657f55c80e3a93bff3104906be"
+    }
+  },
+  "variant": {
+    "id": "missing",
+    "title": "资料缺失",
+    "base": "76K278+308 金标准（原报告复现）",
+    "changes": [
+      "三级抗震措施“限位装置”改为已设置",
+      "删除 2#桩顶 E2 横桥向等效屈服弯矩"
+    ]
+  }
+}

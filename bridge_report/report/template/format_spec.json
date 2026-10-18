@@ -1,0 +1,130 @@
+{
+  "source": {
+    "file": "G8511 76K278+308 (20m+33m+20m)抗震设计验算报告.docx",
+    "sha256": "a6c2093be18799c817aa60333eda30601b57dc532033b7c05f21a0ddb1cb6ca6"
+  },
+  "sections": [
+    {
+      "pgSz": {
+        "w": 11906,
+        "h": 16838
+      },
+      "pgMar": {
+        "top": 1440,
+        "right": 1134,
+        "bottom": 1440,
+        "left": 1134,
+        "header": 851,
+        "footer": 992
+      },
+      "page_number_start": 1,
+      "title_page": true
+    },
+    {
+      "pgSz": {
+        "w": 11906,
+        "h": 16838
+      },
+      "pgMar": {
+        "top": 1418,
+        "right": 1701,
+        "bottom": 1418,
+        "left": 1701,
+        "header": 851,
+        "footer": 992
+      },
+      "page_number_start": 1,
+      "title_page": false
+    },
+    {
+      "pgSz": {
+        "w": 11906,
+        "h": 16838
+      },
+      "pgMar": {
+        "top": 1418,
+        "right": 1418,
+        "bottom": 1418,
+        "left": 1418,
+        "header": 851,
+        "footer": 992
+      },
+      "page_number_start": null,
+      "title_page": false
+    }
+  ],
+  "styles": {
+    "Normal": "1",
+    "heading 1": "2",
+    "heading 2": "3",
+    "heading 3": "4",
+    "heading 4": "5",
+    "toc 1": "20",
+    "toc 2": "21",
+    "toc 3": "15",
+    "图表": "76",
+    "正文表格图名": "25",
+    "封面1": "49",
+    "header": "19",
+    "footer": "18",
+    "报告-正文": "BRBody",
+    "报告-无缩进": "BRPlain",
+    "报告-公式": "BREquation",
+    "报告-表头": "BRTableHead",
+    "报告-表文": "BRTableText",
+    "报告-资料表文": "BRTableData",
+    "报告-表注": "BRNote",
+    "报告-图": "BRFigure",
+    "报告-图题": "BRFigCaption",
+    "报告-表题": "BRTabCaption",
+    "报告-封面注记": "BRCoverNote",
+    "报告-目录标题": "BRTocTitle"
+  },
+  "fonts": {
+    "east_asian": "宋体",
+    "latin": "Times New Roman",
+    "toc_title": "黑体"
+  },
+  "cover": {
+    "blank_before_title": 8,
+    "title_size_half_points": 52,
+    "blank_after_title": 11,
+    "organization_size_half_points": 30
+  },
+  "table": {
+    "width_pct": 5000,
+    "outer": {
+      "val": "double",
+      "sz": 6
+    },
+    "inner": {
+      "val": "single",
+      "sz": 4
+    },
+    "cell_margin_lr": 108,
+    "header_row_height": 564,
+    "body_row_height": 276,
+    "check_font_half_points": 22,
+    "data_font_half_points": 21
+  },
+  "caption": {
+    "figure_style": "BRFigCaption",
+    "table_style": "BRTabCaption",
+    "figure_position": "below",
+    "table_position": "above"
+  },
+  "numbering": {
+    "heading": [
+      "{1}.",
+      "{1}.{2}",
+      "{1}.{2}.{3}"
+    ],
+    "figure_in_h2": "{h2}-{n}",
+    "figure_in_h1": "{h1}-{n}",
+    "equation": "（{h1}-{n}）"
+  },
+  "library": {
+    "figures": 7,
+    "fragments": 5
+  }
+}
